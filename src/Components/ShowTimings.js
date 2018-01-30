@@ -57,7 +57,7 @@ export const NextShow = () => {
       <div className="align-self-center">
         <CardContent>
           <Typography type="display1" color="primary">Next Show</Typography>
-          Bollywood Mix will be live soon at 10:00 am.
+          Bollywood Mix will be live soon at 10:00 am EST.
         </CardContent>
       </div>
     </Card>
