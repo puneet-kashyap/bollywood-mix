@@ -38,7 +38,7 @@ class AppFooter extends React.Component {
           <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
           <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
         </BottomNavigation>
-        <Typography align='center' type="caption"  color="inherit" style={{'background':'rgb(63, 81, 181)','padding':'5px'}}>
+        <Typography align='center' type="caption"  color="inherit" style={{'padding':'5px'}}>
             Copyright &copy; Bollywood Mix {new Date().getFullYear()}<br/>
             Built with 💖 by <u><a href={`mailto:kashyap@bollywoodmix.info`}>Bollywood Mix</a></u>  Fans Club.
         </Typography>
