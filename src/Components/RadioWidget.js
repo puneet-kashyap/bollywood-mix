@@ -59,7 +59,7 @@ class RadioWidget extends Component {
   }
   render(){
     return (
-      <div className="col-md-6 text-center" style={{'padding':'15px'}}>
+      <div className="container col-md-6" style={{'padding':'15px'}}>
       <Card style={{
         'textAlign':'center',
         'margin':'10px',

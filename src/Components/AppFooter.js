@@ -5,6 +5,7 @@ import BottomNavigation, { BottomNavigationAction } from 'material-ui/BottomNavi
 import RestoreIcon from 'material-ui-icons/Restore';
 import FavoriteIcon from 'material-ui-icons/Favorite';
 import LocationOnIcon from 'material-ui-icons/LocationOn';
+import Typography from 'material-ui/Typography';
 
 const styles = {
   root: {
@@ -14,7 +15,7 @@ const styles = {
 
 class AppFooter extends React.Component {
   state = {
-    value: 0,
+    value: 1,
   };
 
   handleChange = (event, value) => {
@@ -26,16 +27,22 @@ class AppFooter extends React.Component {
     const { value } = this.state;
 
     return (
-      <BottomNavigation
-        value={value}
-        onChange={this.handleChange}
-        showLabels
-        className={classes.root}
-      >
-        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
-      </BottomNavigation>
+      <div>
+        <BottomNavigation
+          value={value}
+          onChange={this.handleChange}
+          showLabels
+          className={classes.root}
+        >
+          <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+          <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+          <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+        </BottomNavigation>
+        <Typography align='center' type="caption"  color="inherit" style={{'background':'rgb(63, 81, 181)','padding':'5px'}}>
+            Copyright &copy; Bollywood Mix {new Date().getFullYear()}<br/>
+            Built with 💖 by <u><a href={`mailto:kashyap@bollywoodmix.info`}>Bollywood Mix</a></u>  Fans Club.
+        </Typography>
+      </div>
     );
   }
 }

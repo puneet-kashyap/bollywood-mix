@@ -4,6 +4,13 @@ import Typography from 'material-ui/Typography';
 import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 
 export const ShowTimings = () => {
+  const weekdays = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday'
+  ]
 return(
   <div className="container col-md-6" style={{'padding':'15px'}}>
     <Card style={{
@@ -23,26 +30,12 @@ return(
             </TableRow>
           </TableHead>
           <TableBody>
-            <TableRow>
-              <TableCell>Monday</TableCell>
-              <TableCell>10:00 - 11:30 am</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Tuesday</TableCell>
-              <TableCell>10:00 - 11:30 am</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Wednesday</TableCell>
-              <TableCell>10:00 - 11:30 am</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Thursday</TableCell>
-              <TableCell>10:00 - 11:30 am</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Friday</TableCell>
-              <TableCell>10:00 - 11:30 am</TableCell>
-            </TableRow>
+            {weekdays.map(item =>
+                <TableRow key={item}>
+                    <TableCell>{item}</TableCell>
+                    <TableCell>10:00-11:30 am EST</TableCell>
+                </TableRow>
+            )}
           </TableBody>
         </Table>
       </CardContent>
