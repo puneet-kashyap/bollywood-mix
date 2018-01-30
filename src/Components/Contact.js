@@ -1,7 +1,6 @@
 import React from 'react';
 import Card, { CardContent } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
-import FacebookWidget from './Utils/FacebookWidget';
 
 const Contact = () => {
     return (
@@ -18,7 +17,7 @@ const Contact = () => {
                 <CardContent>
                   <Typography type="display1" color="primary">Andy Nagpal</Typography>
                   <div className="align-self-center">
-                      <img src={require('../Images/Andy_mirror_pix.png')} className="img-responsive center-block" alt="Andy Nagpal"/>
+                      <img src={require('../Images/Andy_mirror_pix.png')} className="img-fluid center-block" alt="Andy Nagpal"/>
                       <p><span>
                           <br/>180 Northfield Dr. W #4
                           <br/>Waterloo, ON N2L 0C7
@@ -42,7 +41,7 @@ const Contact = () => {
                   <CardContent>
                     <Typography type="display1" color="primary">Yasin Dewji</Typography>
                     <div className="align-self-center">
-                        <img src={require('../Images/Andy_profile_pix.png')} className="img-responsive center-block" alt="Andy Nagpal"/>
+                        <img src={require('../Images/Andy_profile_pix.png')} className="img-fluid center-block" alt="Andy Nagpal"/>
                         <p><span>
                             <br/>180 Northfield Dr. W #4
                             <br/>Waterloo, ON N2L 0C7
@@ -55,8 +54,6 @@ const Contact = () => {
               </Card>
             </div>
           </div>
-
-          <FacebookWidget />
       </div>
 );
 

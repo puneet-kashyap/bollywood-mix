@@ -5,6 +5,9 @@ import AppFooter from './Components/AppFooter';
 import RadioWidget from './Components/RadioWidget';
 import {ShowTimings, NextShow} from './Components/ShowTimings';
 import Contact from './Components/Contact';
+import ChatBot from './Components/Utils/ChatWidget/ChatBot';
+import FacebookWidget from './Components/Utils/FacebookWidget';
+
 
 class App extends Component {
   constructor(props){
@@ -42,6 +45,8 @@ class App extends Component {
         {this.state.showRadio === true ? <RadioWidget /> : <NextShow />}
         <ShowTimings />
         <Contact />
+        <ChatBot />
+        <FacebookWidget />  
         <AppFooter />
       </div>
     );
