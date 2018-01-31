@@ -7,7 +7,7 @@ import {ShowTimings, NextShow} from './Components/ShowTimings';
 import Contact from './Components/Contact';
 import ChatBot from './Components/Utils/ChatWidget/ChatBot';
 import FacebookWidget from './Components/Utils/FacebookWidget';
-
+import RefreshPage from './Components/Utils/RefreshPage';
 
 class App extends Component {
   constructor(props){
@@ -22,11 +22,11 @@ class App extends Component {
     var localTime = new Date();
     var estTime = new Date(new Date().setHours(localTime.getHours() + localTime.getTimezoneOffset()/60 - 5));
     this.setState({date: new Date(estTime)})
-    console.log(this.state.date.getDay());
   }
-  
+
   componentDidMount(){
     this.showWidget();
+    RefreshPage(10,0,0)
   }
 
   showWidget = () => {
