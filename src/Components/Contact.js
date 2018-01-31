@@ -4,9 +4,9 @@ import Typography from 'material-ui/Typography';
 
 const Contact = () => {
     return (
-      <div className="container" style={{'padding':'15px'}}>
-        <div className="row">
-        <div className="col-md-6">
+      <div className="container col-md-6" style={{'padding':'15px'}}>
+        {/* <div className="row "> */}
+        <div className="align-self-center">
           <Card style={{
             'textAlign':'center',
             'margin':'10px',
@@ -17,11 +17,14 @@ const Contact = () => {
                 <CardContent>
                   <Typography type="display1" color="primary">Andy Nagpal</Typography>
                   <div className="align-self-center">
-                      <img src={require('../Images/Andy_mirror_pix.png')} className="img-fluid center-block" alt="Andy Nagpal"/>
+                      <img src={require('../Images/Andy_profile_pix.png')} className="img-fluid center-block" alt="Andy Nagpal"/>
                       <p><span>
-                          <br/>180 Northfield Dr. W #4
-                          <br/>Waterloo, ON N2L 0C7
+                          {/* <br/>180 Northfield Dr. W #4
+                          <br/>Waterloo, ON N2L 0C7 */}
+                          <br/>Host
+                          <br/>Ph.# 226-666-9558
                           <br/>Ph.# 647-818-7966
+                          <br/><a href="https://andynagpal.com/" rel="noopener noreferrer" target="_blank">andynagpal.com</a>
                           </span>
                       </p>
                   </div>
@@ -30,7 +33,7 @@ const Contact = () => {
             </Card>
           </div>
 
-          <div className="col-md-6">
+          {/* <div className="col-md-6">
             <Card style={{
               'textAlign':'center',
               'margin':'10px',
@@ -52,8 +55,9 @@ const Contact = () => {
                   </CardContent>
                 </div>
               </Card>
-            </div>
-          </div>
+            </div> */}
+
+          {/* </div> */}
       </div>
 );
 

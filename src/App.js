@@ -17,6 +17,14 @@ class App extends Component {
       showRadio: true
     }
   }
+
+  componentWillMount(){
+    var localTime = new Date();
+    var estTime = new Date(new Date().setHours(localTime.getHours() + localTime.getTimezoneOffset()/60 - 5));
+    this.setState({date: new Date(estTime)})
+    console.log(this.state.date.getDay());
+  }
+  
   componentDidMount(){
     this.showWidget();
   }
@@ -29,9 +37,6 @@ class App extends Component {
       } else if (this.state.date.getHours() === 11 && this.state.date.getMinutes() < 31) {
         console.log("Show is ON.")
         this.setState({showRadio:true})
-      } else {
-        console.log("Wait for show")
-        this.setState({showRadio:false})
       }
     } else {
       console.log("Wait for show")
@@ -46,7 +51,7 @@ class App extends Component {
         <ShowTimings />
         <Contact />
         <ChatBot />
-        <FacebookWidget />  
+        <FacebookWidget />
         <AppFooter />
       </div>
     );
