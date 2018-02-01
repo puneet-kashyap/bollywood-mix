@@ -2,6 +2,7 @@ import React from 'react';
 import Card, { CardContent } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 
+import Advertisement from './Utils/Advertisement';
 const Contact = () => {
     return (
       <div className="container col-md-6" style={{'padding':'15px'}}>
@@ -58,6 +59,7 @@ const Contact = () => {
             </div> */}
 
           {/* </div> */}
+          <Advertisement />
       </div>
 );
 
