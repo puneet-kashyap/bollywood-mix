@@ -5,12 +5,14 @@ import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Ta
 import InquiryForm from './Utils/InquiryForm';
 
 export const ShowTimings = () => {
+  const showTimes = "10:00-11:00 am EST"
   const weekdays = [
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday'
+    {'day':'Monday', 'time':showTimes},
+    {'day':'Tuesday', 'time':showTimes},
+    {'day':'Wednesday', 'time':showTimes},
+    {'day':'Thursday', 'time':showTimes},
+    {'day':'Friday', 'time':showTimes},
+    {'day':'Friday (evening)', 'time':'05:00-06:00 pm EST'}
   ]
 return(
   <div className="row" style={{'padding':'15px','justifyContent':'center'}}>
@@ -33,9 +35,9 @@ return(
                     </TableHead>
                     <TableBody>
                       {weekdays.map(item =>
-                          <TableRow key={item}>
-                              <TableCell>{item}</TableCell>
-                              <TableCell>10:00-11:00 am EST</TableCell>
+                          <TableRow key={item.day}>
+                              <TableCell>{item.day}</TableCell>
+                              <TableCell>{item.time}</TableCell>
                           </TableRow>
                       )}
                     </TableBody>

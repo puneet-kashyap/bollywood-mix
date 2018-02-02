@@ -35,6 +35,9 @@ class App extends Component {
       if (this.state.date.getHours() === 10){
         this.setState({showRadio:true})
           console.log("Show is ON.")
+      } else if (this.state.date.getDay() === 5 && this.state.date.getHours() === 17) {
+        this.setState({showRadio:true})
+          console.log("Evening show is ON.")
       }
     } else {
       console.log("Wait for show")

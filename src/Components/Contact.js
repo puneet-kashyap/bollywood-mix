@@ -4,7 +4,7 @@ import Typography from 'material-ui/Typography';
 import Advertisement from './Utils/Advertisement';
 const Contact = () => {
     return (
-      <div className="container col-md-6" style={{'padding':'15px'}}>
+      <div className="container col-md-4" style={{'padding':'15px'}}>
         {/* <div className="row "> */}
         <div className="align-self-center">
           <Card style={{
