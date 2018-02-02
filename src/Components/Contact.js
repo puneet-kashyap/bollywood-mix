@@ -1,7 +1,6 @@
 import React from 'react';
 import Card, { CardContent } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
-
 import Advertisement from './Utils/Advertisement';
 const Contact = () => {
     return (
@@ -57,7 +56,7 @@ const Contact = () => {
             </div> */}
 
           {/* </div> */}
-          <Advertisement />
+          <Advertisement src={require('../Images/Andy_ad1.jpeg')}/>
       </div>
 );
 
