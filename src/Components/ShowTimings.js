@@ -2,7 +2,12 @@ import React from 'react';
 import Card, { CardContent } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
-import InquiryForm from './Utils/InquiryForm';
+import IconButton from 'material-ui/IconButton';
+import PlayArrowIcon from 'material-ui-icons/PlayArrow';
+import Stop from 'material-ui-icons/Stop';
+import Tooltip from 'material-ui/Tooltip';
+
+import Advertisement from './Utils/Advertisement';
 
 export const ShowTimings = () => {
   const showTimes = "10:00-11:00 am EST"
@@ -12,7 +17,7 @@ export const ShowTimings = () => {
     {'day':'Wednesday', 'time':showTimes},
     {'day':'Thursday', 'time':showTimes},
     {'day':'Friday', 'time':showTimes},
-    {'day':'Friday (evening)', 'time':'05:00-06:00 pm EST'}
+    {'day':'Friday (Wealth-101)', 'time':'05:00-06:00 pm EST'}
   ]
 return(
   <div className="row" style={{'padding':'15px','justifyContent':'center'}}>
@@ -46,9 +51,15 @@ return(
               </div>
           </Card>
     </div>
+
     <div className="col-md-4">
       {/* <Youtube src="https://www.youtube.com/embed/JR2XNLKxu-w"/> */}
-      <InquiryForm />
+        <Advertisement src={require('../Images/Andy_ad1.jpeg')}
+          href="https://andynagpal.com/first-time-buyers"/>
+        <div className="d-none d-md-block">
+          <Advertisement  src={require('../Images/fixer_upper_listing.jpeg')}
+            href="https://andynagpal.com/fixer-upper-radio"/>
+        </div>
     </div>
 
   </div>
@@ -69,6 +80,17 @@ export const NextShow = () => {
           <Typography type="display1" color="primary">Next Show</Typography>
           Bollywood Mix will be live soon at 10:00 am EST.
         </CardContent>
+
+        <Tooltip title="BollywoodMix Show in not live right now." onOpen={console.log('hi')}>
+        <div style={{'alignItems':'center'}}>
+              <IconButton aria-label="Play/pause" disabled>
+                  <PlayArrowIcon style={{height: 38,width: 38}}/>
+              </IconButton>
+              <IconButton aria-label="Next" disabled>
+                  <Stop style={{height: 38,width: 38}}/>
+              </IconButton>
+        </div>
+        </Tooltip>
       </div>
     </Card>
   </div>
