@@ -27,6 +27,7 @@ class App extends Component {
   componentDidMount(){
     this.showWidget();
     RefreshPage(10,0,0);
+    RefreshPage(10,1,0);
   }
 
   showWidget = () => {
@@ -34,9 +35,6 @@ class App extends Component {
       if (this.state.date.getHours() === 10){
         this.setState({showRadio:true})
           console.log("Show is ON.")
-      } else if (this.state.date.getHours() === 11 && this.state.date.getMinutes() < 31) {
-        console.log("Show is ON.")
-        this.setState({showRadio:true})
       }
     } else {
       console.log("Wait for show")

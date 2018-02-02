@@ -20,11 +20,9 @@ const Contact = () => {
                   <div className="align-self-center">
                       <img src={require('../Images/Andy_profile_pix.png')} className="img-fluid center-block" alt="Andy Nagpal"/>
                       <p><span>
-                          {/* <br/>180 Northfield Dr. W #4
-                          <br/>Waterloo, ON N2L 0C7 */}
-                          <br/>Host
-                          <br/>Ph.# 226-666-9558
-                          <br/>Ph.# 647-818-7966
+                          <br/><b>Host</b>
+                          <br/><b>Ph.# </b><a href="tel:+12266669558">226-666-9558</a>
+                          <br/><b>Ph.# </b><a href="tel:+16478187966">647-818-7966</a>
                           <br/><a href="https://andynagpal.com/" rel="noopener noreferrer" target="_blank">andynagpal.com</a>
                           </span>
                       </p>

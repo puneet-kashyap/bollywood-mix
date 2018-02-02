@@ -33,7 +33,7 @@ return(
             {weekdays.map(item =>
                 <TableRow key={item}>
                     <TableCell>{item}</TableCell>
-                    <TableCell>10:00-11:30 am EST</TableCell>
+                    <TableCell>10:00-11:00 am EST</TableCell>
                 </TableRow>
             )}
           </TableBody>
