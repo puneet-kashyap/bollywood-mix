@@ -10,7 +10,7 @@ import Tooltip from 'material-ui/Tooltip';
 import Advertisement from './Utils/Advertisement';
 
 export const ShowTimings = () => {
-  const showTimes = "10:00-11:00 am EST"
+  const showTimes = "10:00-11:30 am EST"
   const weekdays = [
     {'day':'Monday', 'time':showTimes},
     {'day':'Tuesday', 'time':showTimes},
@@ -19,7 +19,10 @@ export const ShowTimings = () => {
     {'day':'Friday', 'time':showTimes},
     {'day':'Friday (Wealth-101)', 'time':'05:00-06:00 pm EST'}
   ]
+
+
 return(
+  <div className="container">
   <div className="row" style={{'padding':'15px','justifyContent':'center'}}>
       <div className="col-md-6">
           <Card style={{
@@ -41,8 +44,8 @@ return(
                     <TableBody>
                       {weekdays.map(item =>
                           <TableRow key={item.day}>
-                              <TableCell>{item.day}</TableCell>
-                              <TableCell>{item.time}</TableCell>
+                              <TableCell padding='none'>{item.day}</TableCell>
+                              <TableCell padding='none'>{item.time}</TableCell>
                           </TableRow>
                       )}
                     </TableBody>
@@ -51,17 +54,13 @@ return(
               </div>
           </Card>
     </div>
-
-    <div className="col-md-4">
-      {/* <Youtube src="https://www.youtube.com/embed/JR2XNLKxu-w"/> */}
-        <Advertisement src={require('../Images/Andy_ad1.jpeg')}
-          href="https://andynagpal.com/first-time-buyers"/>
-        <div className="d-none d-md-block">
-          <Advertisement  src={require('../Images/fixer_upper_listing.jpeg')}
-            href="https://andynagpal.com/fixer-upper-radio"/>
-        </div>
-    </div>
-
+  </div>
+  <div className="row" style={{'padding':'15px','justifyContent':'center'}}>
+      <div className="col-md-4">
+        <Advertisement  src={require('../Images/Home_Worth_ad.jpeg')}
+          href="https://andynagpal.com/free-home-evaluation"/>
+      </div>
+  </div>
   </div>
 )
 }
@@ -81,7 +80,7 @@ export const NextShow = () => {
           Bollywood Mix will be live soon at 10:00 am EST.
         </CardContent>
 
-        <Tooltip title="BollywoodMix Show in not live right now." onOpen={console.log('hi')}>
+        <Tooltip title="BollywoodMix Show in not live right now.">
         <div style={{'alignItems':'center'}}>
               <IconButton aria-label="Play/pause" disabled>
                   <PlayArrowIcon style={{height: 38,width: 38}}/>
@@ -93,6 +92,8 @@ export const NextShow = () => {
         </Tooltip>
       </div>
     </Card>
+    <Advertisement  src={require('../Images/Andy_ad1.jpeg')}
+      href="https://andynagpal.com/first-time-buyers"/>
   </div>
   )
 }

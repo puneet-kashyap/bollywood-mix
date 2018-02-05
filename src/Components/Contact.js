@@ -1,13 +1,12 @@
 import React from 'react';
 import Card, { CardContent } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
-// import Advertisement from './Utils/Advertisement';
 
 const Contact = () => {
     return (
       <div className="row" style={{'padding':'15px','justifyContent':'center'}}>
 
-        <div className="col-md-4 d-none d-md-block">
+        <div className="col-md-5">
           <Card style={{
             'textAlign':'center',
             'margin':'10px',
@@ -32,7 +31,7 @@ const Contact = () => {
           </div>
 
 
-        <div className="align-self-center col-md-4">
+        <div className="align-self-center col-md-5">
           <Card style={{
             'textAlign':'center',
             'margin':'10px',
@@ -55,8 +54,6 @@ const Contact = () => {
               </div>
             </Card>
           </div>
-
-          {/* <Advertisement src={require('../Images/Andy_ad1.jpeg')}/> */}
       </div>
 );
 
