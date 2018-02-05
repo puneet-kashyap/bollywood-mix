@@ -49,7 +49,7 @@ class RadioWidget extends Component {
           </div>
         </div>
       </Card>
-      <Advertisement  src={require('../Images/Andy_ad1.jpeg')}
+      <Advertisement id='first-time-buyers' src={require('../Images/Andy_ad1.jpeg')}
         href="https://andynagpal.com/first-time-buyers"/>
     </div>
     );

@@ -22,7 +22,7 @@ const ChatBot = () => {
       </div>
 
         <div className="d-sm-none">
-          <Advertisement  src={require('../../../Images/fixer_upper_listing.jpeg')}
+          <Advertisement  id='fixer-upper-radio' src={require('../../../Images/fixer_upper_listing.jpeg')}
             href="https://andynagpal.com/fixer-upper-radio"/>
         </div>
 
