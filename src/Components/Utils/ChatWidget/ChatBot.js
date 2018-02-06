@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'material-ui/Card';
-import ReactBotUI from 'react-bot-ui';
+import ReactBotUI from './src';
 import './ChatBot.css';
 import InquiryForm from '../InquiryForm';
 import Advertisement from '../Advertisement';
