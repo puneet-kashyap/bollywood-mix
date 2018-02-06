@@ -6,7 +6,8 @@ import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
-import MenuIcon from 'material-ui-icons/Menu';
+import HomeIcon from 'material-ui-icons/Home';
+import { Link } from 'react-router-dom';
 
 const styles = {
   root: {
@@ -27,13 +28,13 @@ function AppHeader(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-            <MenuIcon />
+          <IconButton href="/" className={classes.menuButton} color="inherit" aria-label="Menu">
+            <HomeIcon />
           </IconButton>
-          <Typography type="title" color="inherit" className={classes.flex}>
-            Bollywood Mix
+          <Typography component={Link} to="/" type="title" color="inherit" className={classes.flex}>
+              Bollywood Mix
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button raised component={Link} to="/Archives" color="primary">Archives</Button>
         </Toolbar>
       </AppBar>
     </div>

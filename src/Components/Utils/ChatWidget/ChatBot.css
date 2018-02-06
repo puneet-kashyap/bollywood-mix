@@ -6,8 +6,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,900);
 
 :root {
-  --primary-color: #3f51b5;
-  --secondary-color: firebrick;
+  --primary-chat-color: #3f51b5;
+  --secondary-chat-color: firebrick;
 
   --border-radius: 10px;
   --icon-size: 50px;
@@ -41,7 +41,7 @@
   width: var(--container-width);
 } */
 .container header {
-  background: var(--primary-color);
+  background: var(--primary-chat-color);
   cursor: pointer;
   height: 45px;
   padding: 5px 10px;
@@ -101,7 +101,7 @@
   float: right;
 }
 .group-user .message {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-chat-color);
   margin: var(--message-margin-y) var(--message-margin-lg) var(--message-margin-y) var(--message-margin-sm);
 }
 .group-bot {
@@ -111,7 +111,7 @@
   float: left;
 }
 .group-bot .message {
-  background-color: var(--primary-color);
+  background-color: var(--primary-chat-color);
   margin: var(--message-margin-y) var(--message-margin-sm) var(--message-margin-y) var(--message-margin-lg);
 }
 .message p {
@@ -121,17 +121,17 @@
   font-weight: var(--font-weight);
 }
 .text-form {
-  border-top: 1px solid var(--primary-color);
+  border-top: 1px solid var(--primary-chat-color);
   display: flex;
   height: 35px;
   width: 100%;
 }
 input::-webkit-input-placeholder {
-  color: var(--primary-color) !important;
+  color: var(--primary-chat-color) !important;
 }
 .text-input {
   border-style: none;
-  color: var(--primary-color);
+  color: var(--primary-chat-color);
   font-family: var(--font-family);
   font-size: var(--font-size);
   padding: 0 10px;
@@ -139,7 +139,7 @@ input::-webkit-input-placeholder {
 }
 .btn-send {
   border: none;
-  background-color: var(--primary-color);
+  background-color: var(--primary-chat-color);
   color: var(--font-color);
   display: flex;
   font-family: var(--font-family);
@@ -148,7 +148,7 @@ input::-webkit-input-placeholder {
 .btn-voice {
   border: none;
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--primary-chat-color);
   display: flex;
   font-size: 1.2em;
   text-align: center;
