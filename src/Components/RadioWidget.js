@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Card, { CardContent } from 'material-ui/Card';
-import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
 import PlayArrowIcon from 'material-ui-icons/PlayArrow';
 import Pause from 'material-ui-icons/Pause';
-import Stop from 'material-ui-icons/Stop';
 import Advertisement from './Utils/Advertisement';
+import Button from 'material-ui/Button';
+import Tooltip from 'material-ui/Tooltip';
 
 
 class RadioWidget extends Component {
@@ -40,12 +40,11 @@ class RadioWidget extends Component {
             <Typography type="display1" color="primary">Listen live</Typography>
           </CardContent>
           <div style={{'alignItems':'center'}}>
-            <IconButton aria-label="Play/pause" onClick={this.playMusic}>
-            {this.state.playing === false ? <PlayArrowIcon style={{height: 38,width: 38}}/> : <Pause />}
-            </IconButton>
-            <IconButton aria-label="Next" onClick={this.playMusic}>
-              <Stop style={{height: 38,width: 38}}/>
-            </IconButton>
+            <Tooltip title="Enjoy the Show.">
+              <Button raised aria-label="Play/pause" color="secondary" onClick={this.playMusic}>
+                {this.state.playing === false ? <PlayArrowIcon /> : <Pause />}
+              </Button>
+            </Tooltip>
           </div>
         </div>
       </Card>

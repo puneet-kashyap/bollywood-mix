@@ -2,10 +2,9 @@ import React from 'react';
 import Card, { CardContent } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
-import IconButton from 'material-ui/IconButton';
 import PlayArrowIcon from 'material-ui-icons/PlayArrow';
-import Stop from 'material-ui-icons/Stop';
 import Tooltip from 'material-ui/Tooltip';
+import Button from 'material-ui/Button';
 
 import Advertisement from './Utils/Advertisement';
 
@@ -82,12 +81,10 @@ export const NextShow = () => {
 
         <Tooltip title="BollywoodMix Show in not live right now.">
         <div style={{'alignItems':'center'}}>
-              <IconButton aria-label="Play/pause" disabled>
-                  <PlayArrowIcon style={{height: 38,width: 38}}/>
-              </IconButton>
-              <IconButton aria-label="Next" disabled>
-                  <Stop style={{height: 38,width: 38}}/>
-              </IconButton>
+              <Button raised aria-label="Play/pause" color="secondary" disabled>
+                  Play
+                  <PlayArrowIcon style={{'marginLeft':'5px'}}/>
+              </Button>
         </div>
         </Tooltip>
       </div>
