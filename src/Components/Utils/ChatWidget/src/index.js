@@ -3,7 +3,7 @@ import ApiAiClient from './lib/dialogflow';
 import Header from './components/Header';
 import Dialog from './components/Dialog';
 import Input from './components/Input';
-// import '../css/main.css';
+import '../ChatBot.css';
 
 const BOT_DELAY = 4000;
 const BOT_SPEED = 0.03;
