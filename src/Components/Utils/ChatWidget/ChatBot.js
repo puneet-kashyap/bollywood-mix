@@ -27,13 +27,15 @@ const ChatBot = () => {
                 href="https://andynagpal.com/fixer-upper-radio"/>
             </div> */}
 
-            <div className="col-md-4 text-center">
+            <div className="col-md-4 text-center d-sm-none">
               <InquiryForm />
             </div>
       </div>
 
-        <Advertisement  id='fixer-upper-radio' src={require('../../../Images/Mortgage_ad.jpg')}
+      <div className="d-sm-none">
+        <Advertisement  id='mortgage-ad' src={require('../../../Images/Mortgage_ad.jpg')}
           href="http://andynagpal.info"/>
+      </div>
 
   </div>
   )

@@ -54,7 +54,7 @@ return(
           </Card>
     </div>
   </div>
-  <div className="row" style={{'padding':'15px','justifyContent':'center'}}>
+  <div className="row d-sm-none" style={{'padding':'15px','justifyContent':'center'}}>
       <div className="col-md-4">
         <Advertisement  id="free-home-evaluation" src={require('../Images/Home_Worth_ad.jpeg')}
           href="https://andynagpal.com/free-home-evaluation"/>
@@ -89,8 +89,12 @@ export const NextShow = () => {
         </Tooltip>
       </div>
     </Card>
-    <Advertisement id="first-time-buyers" src={require('../Images/Andy_ad1.jpeg')}
-      href="https://andynagpal.com/first-time-buyers"/>
+
+    <div className="d-sm-none">
+      <Advertisement id="first-time-buyers" src={require('../Images/Andy_ad1.jpeg')}
+        href="https://andynagpal.com/first-time-buyers"/>
+    </div>
+
   </div>
   )
 }
