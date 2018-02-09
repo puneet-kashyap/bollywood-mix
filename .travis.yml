@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+  - 6
+
+cache:
+  directories:
+    - node_modules
+
+before_script:
+    - echo "About to deploy"
+
+script:
+    - echo "Deploying !"
+    - npm install
+    - REACT_APP_BOT_ID=$BOLLYWOOD_MIX_BOT_ID npm run build
+
+install:
+    - npm install -g firebase-tools
+
+after_success:
+    - firebase deploy --token $FIREBASE_TOKEN_LOY
+    - echo "Successfully deployed"
+
+branches:
+  only:
+  - master
+
+notifications:
+  email: false
