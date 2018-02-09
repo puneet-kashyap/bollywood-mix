@@ -59,9 +59,9 @@ const Contact = () => {
               </div>
           </div>
 
-          <div className="row" style={{'padding':'15px','justifyContent':'center'}}>
+          <div className="row d-sm-none" style={{'padding':'15px','justifyContent':'center'}}>
               <div className="col-md-4">
-                <Advertisement  id="free-home-evaluation" src={require('../Images/Insurance_ad.jpg')}
+                <Advertisement  id="insurance-ad" src={require('../Images/Insurance_ad.jpg')}
                   href="https://andynagpal.com/insurance"/>
               </div>
           </div>
