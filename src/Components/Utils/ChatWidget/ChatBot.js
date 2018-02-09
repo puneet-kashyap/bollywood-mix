@@ -9,7 +9,13 @@ import Advertisement from '../Advertisement';
 const ChatBot = () => {
   return(
     <div className="container">
-        <div className="row" style={{'padding':'15px','justifyContent':'center'}}>
+        <div className="row" style={{'padding':'15px','justifyContent':'center','alignItems':'center'}}>
+
+          <div className="col-md-3 d-none d-md-block">
+            <Advertisement  id="insurance-ad" src={require('../../../Images/Insurance_ad.jpg')}
+              href="https://andynagpal.com/insurance"/>
+          </div>
+
           <div className="col-md-6 text-center">
             <Card raised style={{'padding':'15px', 'marginBottom': '20px'}}>
               <ReactBotUI
@@ -22,10 +28,10 @@ const ChatBot = () => {
             </Card>
           </div>
 
-            {/* <div className="d-sm-none">
-              <Advertisement  id='fixer-upper-radio' src={require('../../../Images/fixer_upper_listing.jpeg')}
-                href="https://andynagpal.com/fixer-upper-radio"/>
-            </div> */}
+            <div className="col-md-3 d-none d-md-block">
+              <Advertisement  id='mortgage-ad' src={require('../../../Images/Mortgage_ad.jpg')}
+                href="http://andynagpal.info"/>
+            </div>
 
             <div className="col-md-4 text-center d-sm-none">
               <InquiryForm />
