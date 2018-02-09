@@ -28,13 +28,13 @@ function AppHeader(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton href="/" className={classes.menuButton} color="inherit" aria-label="Menu">
+          <IconButton id="home-icon" href="/" className={classes.menuButton} color="inherit" aria-label="Menu">
             <HomeIcon />
           </IconButton>
-          <Typography component={Link} to="/" type="title" color="inherit" className={classes.flex}>
+          <Typography id="home-text-link" component={Link} to="/" type="title" color="inherit" className={classes.flex}>
               Bollywood Mix
           </Typography>
-          <Button raised component={Link} to="/Archives" color="primary">Archives</Button>
+          <Button id="archives-button" raised component={Link} to="/Archives" color="primary">Archives</Button>
         </Toolbar>
       </AppBar>
     </div>

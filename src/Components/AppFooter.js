@@ -40,7 +40,10 @@ class AppFooter extends React.Component {
         </BottomNavigation>
         <Typography align='center' type="caption"  color="inherit" style={{'padding':'5px'}}>
             Copyright &copy; Bollywood Mix {new Date().getFullYear()}<br/>
-            Built with 💖 by <u><a href={`mailto:kashyap@bollywoodmix.info`}>Bollywood Mix</a></u>  Fans Club.
+            Built with 💖 by <u>
+              <a id="footer-email" href={`mailto:kashyap@bollywoodmix.info`}>
+                Bollywood Mix
+              </a></u>  Fans Club.
         </Typography>
       </div>
     );

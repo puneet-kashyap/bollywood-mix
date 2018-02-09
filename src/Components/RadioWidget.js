@@ -21,8 +21,10 @@ class RadioWidget extends Component {
     this.setState({playing:!this.state.playing})
     if (!this.state.playing){
       this.state.audio.play();
+      this.playButtonId="play-button";
     }else {
       this.state.audio.pause();
+      this.playButtonId="pause-button";
     }
 
   }
@@ -41,7 +43,7 @@ class RadioWidget extends Component {
           </CardContent>
           <div style={{'alignItems':'center'}}>
             <Tooltip title="Enjoy the Show.">
-              <Button raised aria-label="Play/pause" color="secondary" onClick={this.playMusic}>
+              <Button raised aria-label="Play/pause" color="secondary" id={this.playButtonId} onClick={this.playMusic}>
                 {this.state.playing === false ? <PlayArrowIcon /> : <Pause />}
               </Button>
             </Tooltip>
