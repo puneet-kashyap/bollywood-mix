@@ -92,7 +92,7 @@ export const NextShow = () => {
         </CardContent>
 
         <Tooltip title="BollywoodMix Show in not live right now.">
-        <div style={{'alignItems':'center'}}>
+        <div id="disabled-play-button" style={{'alignItems':'center'}}>
               <Button raised aria-label="Play/pause" color="secondary" disabled>
                   Play
                   <PlayArrowIcon style={{'marginLeft':'5px'}}/>

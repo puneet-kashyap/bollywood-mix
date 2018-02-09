@@ -23,8 +23,11 @@ const Contact = () => {
                           <img src={require('../Images/Yasin_Dewji.jpeg')} className="img-fluid center-block" alt="Andy Nagpal"/>
                           <p><span>
                             <br/><b>Host</b>
-                            <br/>Ph.# <a href="tel:+12266669558">226-666-9558</a>
-                            <br/><a href="https://yasindewji.ca/" rel="noopener noreferrer" target="_blank">yasindewji.ca</a>
+                            <br/>Ph.# <a id="yasin-phone-number" href="tel:+12266669558">226-666-9558</a>
+                            <br/>
+                            <a id="yasin-website" href="https://yasindewji.ca/"
+                              rel="noopener noreferrer" target="_blank">yasindewji.ca
+                            </a>
                               </span>
                           </p>
                       </div>
@@ -48,8 +51,11 @@ const Contact = () => {
                           <img src={require('../Images/Andy_profile_pix.png')} className="img-fluid center-block" alt="Andy Nagpal"/>
                           <p><span>
                               <br/><b>Host</b>
-                              <br/>Ph.# <a href="tel:+12266669558">226-666-9558</a>
-                              <br/><a href="https://andynagpal.com/" rel="noopener noreferrer" target="_blank">andynagpal.com</a>
+                              <br/>Ph.# <a id="andy-phone-number" href="tel:+12266669558">226-666-9558</a>
+                              <br/>
+                              <a id="andy-website" href="https://andynagpal.com/"
+                                rel="noopener noreferrer" target="_blank">andynagpal.com
+                              </a>
                               </span>
                           </p>
                       </div>
