@@ -2,10 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import BottomNavigation, { BottomNavigationAction } from 'material-ui/BottomNavigation';
-import RestoreIcon from 'material-ui-icons/Restore';
-import FavoriteIcon from 'material-ui-icons/Favorite';
-import LocationOnIcon from 'material-ui-icons/LocationOn';
 import Typography from 'material-ui/Typography';
+import {EntypoTwitterWithCircle, EntypoLinkedinWithCircle, EntypoFacebookWithCircle} from 'react-entypo';
 
 const styles = {
   root: {
@@ -20,6 +18,14 @@ class AppFooter extends React.Component {
 
   handleChange = (event, value) => {
     this.setState({ value });
+    if(value === 0){
+      window.open("https://twitter.com/Andynagpal","_blank");
+    } else if (value === 1) {
+      window.open("https://www.facebook.com/bollywoodmixkw/","_blank");
+    } else {
+      window.open("https://linkedin.com","_blank");
+    }
+
   };
 
   render() {
@@ -34,9 +40,9 @@ class AppFooter extends React.Component {
           showLabels
           className={classes.root}
         >
-          <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-          <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-          <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+          <BottomNavigationAction label="Twitter" icon={<EntypoTwitterWithCircle />} />
+          <BottomNavigationAction label="Facebook" icon={<EntypoFacebookWithCircle />} />
+          <BottomNavigationAction label="LinkedIn" icon={<EntypoLinkedinWithCircle />} />
         </BottomNavigation>
         <Typography align='center' type="caption"  color="inherit" style={{'padding':'5px'}}>
             Copyright &copy; Bollywood Mix {new Date().getFullYear()}<br/>
