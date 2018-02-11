@@ -37,7 +37,7 @@ class RadioWidget extends Component {
         'padding':'5px',
         'background':'ghostwhite'
       }}>
-        <div>
+        <div style={{'paddingBottom':'16px'}}>
           <CardContent>
             <Typography type="display1" color="primary">Listen live</Typography>
           </CardContent>

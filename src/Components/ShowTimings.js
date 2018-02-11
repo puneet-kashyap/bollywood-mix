@@ -85,7 +85,7 @@ export const NextShow = () => {
         'padding':'5px',
         'background':'ghostwhite'
       }}>
-      <div className="align-self-center">
+      <div className="align-self-center" style={{'paddingBottom':'16px'}}>
         <CardContent>
           <Typography type="display1" color="primary">Next Show</Typography>
           Bollywood Mix will be live soon at 10:00 am EST.
