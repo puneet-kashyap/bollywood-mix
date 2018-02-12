@@ -61,14 +61,14 @@ return(
     </div>
 
     <div className="col-md-3 d-none d-md-block">
-      <Advertisement  id="free-home-evaluation" src={require('../Images/Home_Worth_ad.jpeg')}
+      <Advertisement  id="free-home-evaluation" src={require('../Images/Home_Evaluation_ad.png')}
         href="https://andynagpal.com/free-home-evaluation"/>
     </div>
 
   </div>
   <div className="row d-sm-none" style={{'padding':'15px','justifyContent':'center'}}>
       <div className="col-md-4">
-        <Advertisement  id="free-home-evaluation" src={require('../Images/Home_Worth_ad.jpeg')}
+        <Advertisement  id="free-home-evaluation" src={require('../Images/Home_Evaluation_ad.png')}
           href="https://andynagpal.com/free-home-evaluation"/>
       </div>
   </div>
