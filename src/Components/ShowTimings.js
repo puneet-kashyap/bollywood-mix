@@ -24,11 +24,9 @@ return(
   <div className="container">
   <div className="row" style={{'padding':'15px','justifyContent':'center','alignItems':'center'}}>
 
-    <div className="col-md-3 d-none d-md-block">
-      {/* <Advertisement id="first-time-buyers" src={require('../Images/Andy_ad1.jpeg')}
-        href="https://andynagpal.com/first-time-buyers"/> */}
-        <Advertisement id="womenhood-ad" src={require('../Images/Womanhood_ad.jpg')}
-          href="http://www.icacicanada.com/"/>
+    <div className="col-md-3">
+      <Advertisement id="first-time-buyers" src={require('../Images/Andy_ad1.jpeg')}
+        href="https://andynagpal.com/first-time-buyers"/>
     </div>
 
       <div className="col-md-6">
@@ -104,10 +102,10 @@ export const NextShow = () => {
       </div>
     </Card>
 
-    <div className="d-sm-none">
+    {/* <div className="d-sm-none">
       <Advertisement id="first-time-buyers" src={require('../Images/Andy_ad1.jpeg')}
         href="https://andynagpal.com/first-time-buyers"/>
-    </div>
+    </div> */}
 
   </div>
   )
