@@ -3,7 +3,6 @@ import Card, { CardContent } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 import PlayArrowIcon from 'material-ui-icons/PlayArrow';
 import Pause from 'material-ui-icons/Pause';
-import Advertisement from './Utils/Advertisement';
 import Button from 'material-ui/Button';
 import Tooltip from 'material-ui/Tooltip';
 
@@ -31,6 +30,7 @@ class RadioWidget extends Component {
   render(){
     return (
       <div className="container col-md-6" style={{'padding':'15px'}}>
+
       <Card style={{
         'textAlign':'center',
         'margin':'10px',
@@ -50,11 +50,6 @@ class RadioWidget extends Component {
           </div>
         </div>
       </Card>
-
-    <div className="d-sm-none">
-      <Advertisement id='first-time-buyers' src={require('../Images/Andy_ad1.jpeg')}
-        href="https://andynagpal.com/first-time-buyers"/>
-    </div>
 
     </div>
     );
