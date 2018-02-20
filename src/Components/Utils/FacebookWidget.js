@@ -4,7 +4,7 @@ const FacebookWidget = () => {
   return(
     <div className="container " style={{'padding':'15px'}}>
       <div className="col-md-6 d-sm-none align-self-center">
-            <div className="fb-page"
+            <div className="fb-page" id="facebook-widget"
               data-href="https://www.facebook.com/Bollywood-Mix-352859711847144/"
               data-tabs="timeline,messages,events"
               data-show-facepile="true">

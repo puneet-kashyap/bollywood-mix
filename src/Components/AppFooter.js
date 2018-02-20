@@ -40,9 +40,9 @@ class AppFooter extends React.Component {
           showLabels
           className={classes.root}
         >
-          <BottomNavigationAction label="Twitter" icon={<EntypoTwitterWithCircle />} />
-          <BottomNavigationAction label="Facebook" icon={<EntypoFacebookWithCircle />} />
-          <BottomNavigationAction label="LinkedIn" icon={<EntypoLinkedinWithCircle />} />
+          <BottomNavigationAction id="twitter-icon" label="Twitter" icon={<EntypoTwitterWithCircle />} />
+          <BottomNavigationAction id="facebook-icon" label="Facebook" icon={<EntypoFacebookWithCircle />} />
+          <BottomNavigationAction id="linkedin-icon" label="LinkedIn" icon={<EntypoLinkedinWithCircle />} />
         </BottomNavigation>
         <Typography align='center' type="caption"  color="inherit" style={{'padding':'5px'}}>
             Copyright &copy; Bollywood Mix {new Date().getFullYear()}<br/>
