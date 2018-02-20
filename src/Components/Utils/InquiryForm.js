@@ -96,6 +96,7 @@ class InquiryForm extends Component {
                   />
                 </Tooltip>
                 <Button raised
+                  id="inquiry-form-submit"
                   type="submit"
                   color="primary">
                   Submit

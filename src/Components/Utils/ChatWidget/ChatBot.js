@@ -19,6 +19,7 @@ const ChatBot = () => {
           <div className="col-md-6 text-center">
             <Card raised style={{'padding':'15px', 'marginBottom': '20px'}}>
               <ReactBotUI
+                id="chat-bot"
                 title={'Chat with us.'}
                 dialogflow={{accessToken: process.env.REACT_APP_BOT_ID}}
                 dialogHeightMax={350}
