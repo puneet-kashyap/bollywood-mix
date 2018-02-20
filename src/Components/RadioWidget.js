@@ -12,7 +12,8 @@ class RadioWidget extends Component {
     super(props);
     this.state={
       playing:false,
-      audio:new Audio('http://192.240.102.133:7703/stream')
+      audio:new Audio('http://192.240.102.133:7703/stream'),
+      playButtonId:'play-button'
     }
   }
 
@@ -20,10 +21,10 @@ class RadioWidget extends Component {
     this.setState({playing:!this.state.playing})
     if (!this.state.playing){
       this.state.audio.play();
-      this.playButtonId="play-button";
+      this.setState({playButtonId:'pause-button'});
     }else {
       this.state.audio.pause();
-      this.playButtonId="pause-button";
+      this.setState({playButtonId:'play-button'});
     }
 
   }
@@ -43,7 +44,7 @@ class RadioWidget extends Component {
           </CardContent>
           <div style={{'alignItems':'center'}}>
             <Tooltip title="Enjoy the Show.">
-              <Button raised aria-label="Play/pause" color="secondary" id={this.playButtonId} onClick={this.playMusic}>
+              <Button raised aria-label="Play/pause" color="secondary" id={this.state.playButtonId} onClick={this.playMusic}>
                 {this.state.playing === false ? <PlayArrowIcon /> : <Pause />}
               </Button>
             </Tooltip>
