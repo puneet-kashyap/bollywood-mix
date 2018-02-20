@@ -55,7 +55,7 @@ class InquiryForm extends Component {
                 </Tooltip>
                 <Tooltip title="Name of the person to dedicte a song ?">
                   <TextField required
-                    name="Phone"
+                    name="DedicateTo"
                     label="Name of the loved one."
                     placeholder="Name of the person to dedicte a song."
                     margin="dense"
@@ -65,7 +65,7 @@ class InquiryForm extends Component {
                 </Tooltip>
                 <Tooltip title="On what date we should play the song ?">
                   <TextField required
-                    name="date"
+                    name="Date"
                     label="Date"
                     type="date"
                     defaultValue={this.state.date}
@@ -76,7 +76,7 @@ class InquiryForm extends Component {
                 </Tooltip>
                 <Tooltip title="At what time should we play the song ?">
                   <TextField required
-                    name="time"
+                    name="Time"
                     label="Time"
                     type="time"
                     defaultValue={this.state.time}
