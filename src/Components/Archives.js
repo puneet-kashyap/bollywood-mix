@@ -21,7 +21,7 @@ const Archives  = () => {
         <Typography type="display1" component="h1" color="primary" style={{'padding':'25px','text-align':'center'}}>
           Bollywood Mix Archives
         </Typography>
-      <div className="row">
+      <div className="row" id="youtube">
           {youtubeVideos.map(item =>
             <div key={item}  id={item} className="col-md-4 text-center" style={{'padding':'15px'}}>
               <Card raised>
