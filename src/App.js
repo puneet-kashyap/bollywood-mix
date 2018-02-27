@@ -29,6 +29,7 @@ class App extends Component {
     RefreshPage(10,0,0);
     RefreshPage(11,31,0);
     RefreshPage(17,0,0);
+    RefreshPage(18,0,0);
   }
 
   showWidget = () => {
