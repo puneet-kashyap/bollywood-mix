@@ -45,6 +45,7 @@ class InquiryForm extends Component {
             <form onSubmit={this.submit}>
                 <Tooltip title="Your name please">
                   <TextField required
+                    id="inquiry-form-name"
                     name="Name"
                     label="Your Name"
                     placeholder="First and Last Name"
@@ -55,6 +56,7 @@ class InquiryForm extends Component {
                 </Tooltip>
                 <Tooltip title="Name of the person to dedicte a song ?">
                   <TextField required
+                    id="inquiry-form-dedicate-to"
                     name="DedicateTo"
                     label="Name of the loved one."
                     placeholder="Name of the person to dedicte a song."
@@ -65,6 +67,7 @@ class InquiryForm extends Component {
                 </Tooltip>
                 <Tooltip title="On what date we should play the song ?">
                   <TextField required
+                    id="inquiry-form-date"
                     name="Date"
                     label="Date"
                     type="date"
@@ -76,6 +79,7 @@ class InquiryForm extends Component {
                 </Tooltip>
                 <Tooltip title="At what time should we play the song ?">
                   <TextField required
+                    id="inquiry-form-time"
                     name="Time"
                     label="Time"
                     type="time"
@@ -87,6 +91,7 @@ class InquiryForm extends Component {
                 </Tooltip>
                 <Tooltip title="Name of the song you want to dedicte.">
                   <TextField required
+                    id="inquiry-form-song"
                     name="Song"
                     label="Song"
                     placeholder="Name of the song you want to dedicte."
