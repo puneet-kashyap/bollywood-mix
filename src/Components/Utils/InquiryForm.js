@@ -18,8 +18,8 @@ class InquiryForm extends Component {
 
   componentWillMount(){
     const today = new Date();
-    const date = today.getFullYear()+'-'+('0'+today.getMonth()).slice(-2)+'-'+
-    ('0'+today.getDate()).slice(-2)
+    const date = today.getFullYear()+'-'+('0'+(today.getMonth()+1)).slice(-2)+'-'+
+    ('0'+(today.getDate()+1)).slice(-2)
     this.setState({date:date})
   }
 
