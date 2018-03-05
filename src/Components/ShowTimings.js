@@ -9,7 +9,7 @@ import Button from 'material-ui/Button';
 import Advertisement from './Utils/Advertisement';
 
 export const ShowTimings = () => {
-  const showTimes = "10:00-11:30 am EST"
+  const showTimes = "10:00-11:00 am EST"
   const weekdays = [
     {'day':'Monday', 'time':showTimes},
     {'day':'Tuesday', 'time':showTimes},
