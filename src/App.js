@@ -34,8 +34,9 @@ class App extends Component {
 
   showWidget = () => {
     if (this.state.date.getDay() > 0 && this.state.date.getDay() < 6) {
-      if ((this.state.date.getHours() === 10) ||
-        ((this.state.date.getHours() === 11) /*&& (this.state.date.getMinutes() < 31)*/)){
+      if ((this.state.date.getHours() === 10)
+      // || ((this.state.date.getHours() === 11) /&& (this.state.date.getMinutes() < 31))
+      ){
         this.setState({showRadio:true})
           console.log("Show is ON.")
       } else if (this.state.date.getDay() === 5 && this.state.date.getHours() === 17) {
