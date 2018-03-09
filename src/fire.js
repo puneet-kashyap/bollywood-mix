@@ -13,7 +13,6 @@ import firebase from 'firebase';
   const storeDeviceTokens = (token) => {
     database.ref('Devices').push().set({token})
     .catch(function(err) {
-      console.log('Token catch.');
     })
   }
 
