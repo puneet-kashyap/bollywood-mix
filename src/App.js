@@ -9,6 +9,7 @@ import Contact from './Components/Contact';
 import ChatBot from './Components/Utils/ChatWidget/ChatBot';
 import FacebookWidget from './Components/Utils/FacebookWidget';
 import RefreshPage from './Components/Utils/RefreshPage';
+import './fire';
 
 class App extends Component {
   constructor(props){
