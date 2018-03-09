@@ -9,6 +9,18 @@
 
     const messaging = firebase.messaging();
 
+    messaging.requestPermission()
+      .then(function() {
+        return messaging.getToken();
+      })
+      .then(function(token) {
+        console.log("Got permission");
+        storeDeviceTokens(token)
+      })
+      .catch(function(err) {
+        console.log('Unable to get permission to notify.', err);
+      })
+
     messaging.onMessage(function(payload) {
       console.log('SW onMessage: ', payload);
     });
