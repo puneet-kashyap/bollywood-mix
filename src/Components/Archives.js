@@ -18,7 +18,7 @@ const Archives  = () => {
     <div>
       <AppHeader />
       <div>
-        <Typography type="display1" component="h1" color="primary" style={{'padding':'25px','text-align':'center'}}>
+        <Typography type="display1" component="h1" color="primary" style={{'padding':'25px','textAlign':'center'}}>
           Bollywood Mix Archives
         </Typography>
       <div className="row" id="youtube">
