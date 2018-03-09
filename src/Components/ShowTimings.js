@@ -5,7 +5,7 @@ import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Ta
 import PlayArrowIcon from 'material-ui-icons/PlayArrow';
 import Tooltip from 'material-ui/Tooltip';
 import Button from 'material-ui/Button';
-
+import {requestPermission} from '../fire';
 import Advertisement from './Utils/Advertisement';
 
 export const ShowTimings = () => {
@@ -99,6 +99,15 @@ export const NextShow = () => {
               </Button>
         </div>
         </Tooltip>
+
+        <Tooltip title="We will notify you once the show is Live.">
+        <div id="notify-me" style={{'alignItems':'center', 'paddingTop':'25px'}}>
+              <Button raised aria-label="Notify Me" color="primary" onClick={requestPermission}>
+                  Notify Me
+              </Button>
+        </div>
+        </Tooltip>
+
       </div>
     </Card>
 
