@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment-timezone';
 import './App.css';
 import AppHeader from './Components/AppHeader';
 import AppFooter from './Components/AppFooter';
@@ -22,7 +23,7 @@ class App extends Component {
 
   componentWillMount(){
     var localTime = new Date();
-    var estTime = new Date(new Date().setHours(localTime.getHours() + localTime.getTimezoneOffset()/60 - 5));
+    var estTime = moment(localTime).tz('America/Toronto')._i;
     this.setState({date: new Date(estTime)})
   }
 
