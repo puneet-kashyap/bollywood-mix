@@ -3,7 +3,6 @@ import moment from 'moment-timezone';
 const RefreshPage = (hours, minutes, seconds) => {
   var localTime = new Date();
   var estTime = moment(localTime).tz('America/Toronto')._i;
-  // var now = estTime
   var then = new Date(estTime);
 
   if(estTime.getHours() > hours ||

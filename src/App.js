@@ -16,15 +16,9 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state={
-      date: new Date(),
+      date: moment(new Date()).tz('America/Toronto')._i,
       showRadio: false
     }
-  }
-
-  componentWillMount(){
-    var localTime = new Date();
-    var estTime = moment(localTime).tz('America/Toronto')._i;
-    this.setState({date: new Date(estTime)})
   }
 
   componentDidMount(){
@@ -37,14 +31,12 @@ class App extends Component {
 
   showWidget = () => {
     if (this.state.date.getDay() > 0 && this.state.date.getDay() < 6) {
-      if ((this.state.date.getHours() === 10)
-      // || ((this.state.date.getHours() === 11) /&& (this.state.date.getMinutes() < 31))
-      ){
+      if ((this.state.date.getHours() === 10)){
         this.setState({showRadio:true})
-          console.log("Show is ON.")
+        console.log("Show is ON.")
       } else if (this.state.date.getDay() === 5 && this.state.date.getHours() === 17) {
         this.setState({showRadio:true})
-          console.log("Evening show is ON.")
+        console.log("Evening show is ON.")
       }
     } else {
       console.log("Wait for show")
