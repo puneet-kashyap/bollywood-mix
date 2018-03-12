@@ -60,8 +60,8 @@ export class NextShow extends Component {
 
           {this.state.notified === false ?
             <Tooltip title="We will notify you once the show is Live.">
-            <div id="notify-me" style={{'alignItems':'center', 'paddingTop':'25px'}}>
-                  <Button raised aria-label="Notify Me" color="primary" onClick={this.notifyMe}>
+            <div style={{'alignItems':'center', 'paddingTop':'25px'}}>
+                  <Button id="notify-me" raised aria-label="Notify Me" color="primary" onClick={this.notifyMe}>
                       Notify Me
                   </Button>
             </div>
