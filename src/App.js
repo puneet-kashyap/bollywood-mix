@@ -14,10 +14,9 @@ import './fire';
 
 class App extends Component {
   constructor(props){
-    moment.tz.setDefault("America/Toronto");
     super(props);
     this.state={
-      date: moment().toDate(),
+      date: moment().tz("America/Toronto"),
       showRadio: false
     }
   }
@@ -31,11 +30,11 @@ class App extends Component {
   }
 
   showWidget = () => {
-    if (this.state.date.getDay() > 0 && this.state.date.getDay() < 6) {
-      if ((this.state.date.getHours() === 10)){
+    if (this.state.date.day() > 0 && this.state.date.day() < 6) {
+      if ((this.state.date.hours() === 10)){
         this.setState({showRadio:true})
         console.log("Show is ON.")
-      } else if (this.state.date.getDay() === 5 && this.state.date.getHours() === 17) {
+      } else if (this.state.date.day() === 5 && this.state.date.hours() === 17) {
         this.setState({showRadio:true})
         console.log("Evening show is ON.")
       }
