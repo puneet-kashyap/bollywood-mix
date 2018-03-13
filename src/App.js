@@ -14,9 +14,10 @@ import './fire';
 
 class App extends Component {
   constructor(props){
+    moment.tz.setDefault("America/Toronto");
     super(props);
     this.state={
-      date: moment(new Date()).tz('America/Toronto')._i,
+      date: moment().toDate(),
       showRadio: false
     }
   }
