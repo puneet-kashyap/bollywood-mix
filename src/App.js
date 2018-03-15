@@ -37,9 +37,12 @@ class App extends Component {
       } else if (this.state.date.day() === 5 && this.state.date.hours() === 17) {
         this.setState({showRadio:true})
         console.log("Evening show is ON.")
+      } else {
+        console.log("Wait for the show");
+        console.log(moment().tz("America/Toronto").format());
       }
     } else {
-      console.log("Wait for show")
+      console.log("Show will be live next week.");
     }
   }
 
