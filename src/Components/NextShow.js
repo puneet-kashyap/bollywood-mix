@@ -8,10 +8,12 @@ import Snackbar from 'material-ui/Snackbar';
 import { requestPermission } from '../fire';
 import IconButton from 'material-ui/IconButton';
 import CloseIcon from 'material-ui-icons/Close';
+import moment from 'moment-timezone';
 
 export class NextShow extends Component {
   constructor(props){
     super(props);
+
     this.state={
       notified:false,
       open: false
@@ -21,6 +23,11 @@ export class NextShow extends Component {
     if (window.localStorage.getItem('bollywoodmix') === '1') {
       this.setState({notified: true});
     }
+    const estTime = moment().tz("America/Toronto");
+    const localZone = moment.tz.guess();
+    estTime.set({'hour':10,'minute':0})
+    const localShowTime = estTime.tz(localZone).format('hh:mm a z');
+    this.setState({showTime: localShowTime});
   }
 
   notifyMe = () => {
@@ -46,7 +53,7 @@ export class NextShow extends Component {
         <div className="align-self-center" style={{'paddingBottom':'16px'}}>
           <CardContent>
             <Typography type="display1" color="primary">Next Show</Typography>
-            Bollywood Mix will be live soon at 10:00 am EST.
+            Bollywood Mix will be live soon at {this.state.showTime}.
           </CardContent>
 
           <Tooltip title="BollywoodMix Show in not live right now.">
