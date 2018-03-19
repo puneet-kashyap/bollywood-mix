@@ -17,7 +17,7 @@ export class NextShow extends Component {
     this.state={
       notified:false,
       open: false,
-      now:[]
+      now:countDownShowTime().split(":")
     }
   }
 
