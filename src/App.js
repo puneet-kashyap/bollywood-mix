@@ -39,7 +39,7 @@ class App extends Component {
         console.log("Evening show is ON.")
       } else {
         console.log("Wait for the show");
-        console.log(moment().tz("America/Toronto").format());
+        // console.log(moment().tz("America/Toronto").format());
       }
     } else {
       console.log("Show will be live next week.");
