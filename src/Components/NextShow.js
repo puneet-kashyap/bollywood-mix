@@ -9,16 +9,18 @@ import { requestPermission } from '../fire';
 import IconButton from 'material-ui/IconButton';
 import CloseIcon from 'material-ui-icons/Close';
 import moment from 'moment-timezone';
+import { countDownShowTime } from './Utils/TimeMoment';
 
 export class NextShow extends Component {
   constructor(props){
     super(props);
-
     this.state={
       notified:false,
-      open: false
+      open: false,
+      now:[]
     }
   }
+
   componentDidMount(){
     if (window.localStorage.getItem('bollywoodmix') === '1') {
       this.setState({notified: true});
@@ -28,7 +30,17 @@ export class NextShow extends Component {
     estTime.set({'hour':10,'minute':0})
     const localShowTime = estTime.tz(localZone).format('hh:mm a z');
     this.setState({showTime: localShowTime});
+    this.timerID = setInterval(this.updateTime, 1000);
   }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  updateTime = () => {
+    var timer = countDownShowTime().split(":");
+    this.setState({ now: timer });
+  };
 
   notifyMe = () => {
     window.localStorage.setItem('bollywoodmix', 1);
@@ -54,6 +66,28 @@ export class NextShow extends Component {
           <CardContent>
             <Typography type="display1" color="primary">Next Show</Typography>
             Bollywood Mix will be live soon at {this.state.showTime}.
+          </CardContent>
+
+          <CardContent>
+            Next show will be live in : <br/>
+            <div id="clockdiv"className="row">
+              {/* <div>
+                <span className="days"></span>
+                <div className="smalltext">Days</div>
+              </div> */}
+              <div>
+                <span className="hours">{this.state.now[0]}</span>
+                <div className="smalltext">Hours</div>
+              </div>
+              <div>
+                <span className="minutes">{this.state.now[1]}</span>
+                <div className="smalltext">Minutes</div>
+              </div>
+              <div>
+                <span className="seconds">{this.state.now[2]}</span>
+                <div className="smalltext">Seconds</div>
+              </div>
+            </div>
           </CardContent>
 
           <Tooltip title="BollywoodMix Show in not live right now.">
