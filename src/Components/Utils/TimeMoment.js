@@ -6,8 +6,10 @@ export const countDownShowTime = () => {
   var showTime = moment().tz("America/Toronto").set({'hour':10,'minute':0,'second':0});
   var eveningShow = moment().tz("America/Toronto").set({'hour':17,'minute':0,'second':0});
 
-  var nextDay = moment.duration(showTime.add(1,'day').diff(estTime)).as('minutes');
-  var dayAfterTomorrow = moment.duration(showTime.add(2,'day').diff(estTime)).as('minutes');
+  var nextDay = moment.duration(moment().tz("America/Toronto").set(
+    {'hour':10,'minute':0,'second':0}).add(1,'day').diff(estTime)).as('minutes');
+  var dayAfterTomorrow = moment.duration(moment().tz("America/Toronto").set(
+    {'hour':10,'minute':0,'second':0}).add(2,'day').diff(estTime)).as('minutes');
 
   var duration, remainingTime;
 
