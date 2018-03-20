@@ -39,6 +39,8 @@ export class NextShow extends Component {
 
   updateTime = () => {
     var timer = countDownShowTime().split(":");
+    if(timer.length === 2) timer.unshift('00');
+    else if (timer.length === 1)timer.unshift('00','00');
     this.setState({ now: timer });
   };
 
