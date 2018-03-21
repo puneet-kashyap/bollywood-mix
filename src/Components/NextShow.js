@@ -25,9 +25,7 @@ export class NextShow extends Component {
     if (window.localStorage.getItem('bollywoodmix') === '1') {
       this.setState({notified: true});
     }
-    // const estTime = moment().tz("America/Toronto");
     const localZone = moment.tz.guess();
-    // estTime.set({'hour':10,'minute':0})
     const localShowTime = countDownShowTime().nextShowTime.tz(localZone).format('hh:mm a z');
     this.setState({showTime: localShowTime});
     this.timerID = setInterval(this.updateTime, 1000);

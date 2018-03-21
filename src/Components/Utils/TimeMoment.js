@@ -1,15 +1,25 @@
 import moment from 'moment-timezone';
 import 'moment-duration-format';
 
-export const countDownShowTime = () => {
-  const estTime = moment().tz("America/Toronto");
-  const showTime = moment().tz("America/Toronto").set({'hour':10,'minute':0,'second':0});
-  const eveningShow = moment().tz("America/Toronto").set({'hour':17,'minute':0,'second':0});
+export const EstTime = () => moment().tz("America/Toronto");
 
-  const nextDay = moment.duration(moment().tz("America/Toronto").set(
-    {'hour':10,'minute':0,'second':0}).add(1,'day').diff(estTime)).as('minutes');
-  const dayAfterTomorrow = moment.duration(moment().tz("America/Toronto").set(
-    {'hour':10,'minute':0,'second':0}).add(2,'day').diff(estTime)).as('minutes');
+export const LocalTime = (estTime) => {
+  // local time zone of the user
+  const localZone = moment.tz.guess();
+  if (estTime) {
+    return new EstTime().set({'hour':estTime,'minute':0,'second':0}).tz(localZone);
+  } else {
+    return new EstTime().tz(localZone);
+  }
+}
+
+export const countDownShowTime = () => {
+  const estTime = new EstTime();
+  const showTime = new EstTime().set({'hour':10,'minute':0,'second':0});
+  const eveningShow = new EstTime().set({'hour':17,'minute':0,'second':0});
+
+  const nextDay = moment.duration(showTime.add(1,'day').diff(estTime)).as('minutes');
+  const dayAfterTomorrow = moment.duration(showTime.add(2,'day').diff(estTime)).as('minutes');
 
   var duration, remainingTime;
   let nextShowTime = showTime;
@@ -25,6 +35,7 @@ export const countDownShowTime = () => {
       duration = moment.duration(showTime.diff(estTime)).asMinutes();
     }
     else {
+      // monday to friday after 10 am
       duration = nextDay;
     }
 

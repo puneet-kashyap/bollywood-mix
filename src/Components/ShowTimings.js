@@ -2,17 +2,25 @@ import React from 'react';
 import Card, { CardContent } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
+import { LocalTime } from './Utils/TimeMoment';
 import Advertisement from './Utils/Advertisement';
 
+
 export const ShowTimings = () => {
-  const showTimes = "10:00-11:00 am EST"
+
+  const showTimes = new LocalTime(10).format('hh:mm') + ' - ' +
+    new LocalTime(11).format('hh:mm a z');
+
+  const eveningShowTimes = new LocalTime(17).format('hh:mm') + ' - ' +
+      new LocalTime(18).format('hh:mm a z');
+
   const weekdays = [
     {'day':'Monday', 'time':showTimes},
     {'day':'Tuesday', 'time':showTimes},
     {'day':'Wednesday', 'time':showTimes},
     {'day':'Thursday', 'time':showTimes},
     {'day':'Friday', 'time':showTimes},
-    {'day':'Friday (Wealth-101)', 'time':'05:00-06:00 pm EST'}
+    {'day':'Friday (Wealth-101)', 'time':eveningShowTimes}
   ]
 
 
