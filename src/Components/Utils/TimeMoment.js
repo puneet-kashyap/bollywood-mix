@@ -18,8 +18,12 @@ export const countDownShowTime = () => {
   const showTime = new EstTime().set({'hour':10,'minute':0,'second':0});
   const eveningShow = new EstTime().set({'hour':17,'minute':0,'second':0});
 
-  const nextDay = moment.duration(showTime.add(1,'day').diff(estTime)).as('minutes');
-  const dayAfterTomorrow = moment.duration(showTime.add(2,'day').diff(estTime)).as('minutes');
+  const nextDay = moment.duration(
+    new EstTime().set({'hour':10,'minute':0,'second':0}).add(1,'day').diff(estTime)
+  ).as('minutes');
+  const dayAfterTomorrow = moment.duration(
+    new EstTime().set({'hour':10,'minute':0,'second':0}).add(2,'day').diff(estTime)
+  ).as('minutes');
 
   var duration, remainingTime;
   let nextShowTime = showTime;
