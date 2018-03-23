@@ -3,7 +3,7 @@ import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
-//import { writeInquiryData } from '../../fire';
+import { writeSongRequest } from '../../fire';
 import Tooltip from 'material-ui/Tooltip';
 
 class InquiryForm extends Component {
@@ -29,7 +29,7 @@ class InquiryForm extends Component {
   submit = () => {
     this.setState({form:'filled'})
     console.log(this.state);
-    // writeInquiryData(this.state);
+    writeSongRequest(this.state);
   }
   render () {
     if (this.state.form === 'blank') {
