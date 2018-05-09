@@ -33,6 +33,10 @@ class African extends Component {
           showRadio: false
         }
       }
+    
+    componentDidMount(){
+        document.title = "African Music"
+    }
 
     render(){
         const { classes } = this.props;
