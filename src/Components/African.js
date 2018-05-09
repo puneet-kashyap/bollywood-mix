@@ -11,6 +11,7 @@ import RadioWidget from '../Components/RadioWidget';
 import FacebookWidget from '../Components/Utils/FacebookWidget';
 import Contact from '../Components/Contact';
 import InquiryForm from './Utils/InquiryForm';
+import {ShowTimings} from '../Components/ShowTimings';
 
 
 const styles = {
@@ -38,6 +39,14 @@ class African extends Component {
         document.title = "African Music"
     }
 
+    showTimings = [
+        {day:'Monday',start:10,stop:11},
+        {day:'Tuesday',start:10,stop:11},
+        {day:'Wednesday',start:10,stop:11},
+        {day:'Thursday',start:10,stop:11},
+        {day:'Friday',start:10,stop:11}
+      ]
+
     render(){
         const { classes } = this.props;
         return (
@@ -54,6 +63,7 @@ class African extends Component {
                 </AppBar>
 
                 <RadioWidget />
+                <ShowTimings timings={this.showTimings}/>
                 <Contact />
                 <div className="col-md-4 text-center d-sm-none">
                     <InquiryForm 

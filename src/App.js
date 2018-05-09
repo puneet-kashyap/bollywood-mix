@@ -46,12 +46,21 @@ class App extends Component {
     }
   }
 
+  showTimings = [
+    {day:'Monday',start:10,stop:11},
+    {day:'Tuesday',start:10,stop:11},
+    {day:'Wednesday',start:10,stop:11},
+    {day:'Thursday',start:10,stop:11},
+    {day:'Friday',start:10,stop:11},
+    {day:'Friday (Wealth-101)',start:17,stop:18}
+  ]
+
   render() {
     return (
       <div className="App">
         <AppHeader />
         {this.state.showRadio === true ? <RadioWidget /> : <NextShow />}
-        <ShowTimings />
+        <ShowTimings timings={this.showTimings}/>
         <Contact />
         <ChatBot />
         <FacebookWidget 

@@ -6,23 +6,14 @@ import { LocalTime } from './Utils/TimeMoment';
 import Advertisement from './Utils/Advertisement';
 
 
-export const ShowTimings = () => {
+export const ShowTimings = (props) => {
 
-  const showTimes = new LocalTime(10).format('hh:mm') + ' - ' +
-    new LocalTime(11).format('hh:mm a z');
-
-  const eveningShowTimes = new LocalTime(17).format('hh:mm') + ' - ' +
-      new LocalTime(18).format('hh:mm a z');
-
-  const weekdays = [
-    {'day':'Monday', 'time':showTimes},
-    {'day':'Tuesday', 'time':showTimes},
-    {'day':'Wednesday', 'time':showTimes},
-    {'day':'Thursday', 'time':showTimes},
-    {'day':'Friday', 'time':showTimes},
-    {'day':'Friday (Wealth-101)', 'time':eveningShowTimes}
-  ]
-
+  let weeklyShowTimes = props.timings.map(element => {
+    return ({
+      'day':element.day, 
+      'time':new LocalTime(element.start).format('hh:mm') + ' - ' + new LocalTime(element.stop).format('hh:mm a z')
+    })
+  });
 
 return(
   <div className="container">
@@ -51,7 +42,7 @@ return(
                         </TableRow>
                       </TableHead>
                       <TableBody>
-                        {weekdays.map(item =>
+                        {weeklyShowTimes.map(item =>
                             <TableRow key={item.day}>
                                 <TableCell padding='none'>{item.day}</TableCell>
                                 <TableCell padding='none'>{item.time}</TableCell>
