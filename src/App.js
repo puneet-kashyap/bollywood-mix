@@ -55,13 +55,30 @@ class App extends Component {
     {day:'Friday (Wealth-101)',start:17,stop:18}
   ]
 
+  contacts = [
+    {
+      firstName: 'Yasin',
+      lastName: 'Dewji',
+      src: require('./Images/Yasin_Dewji.jpeg'),
+      phone: '226-666-9558',
+      website: 'yasindewji.ca'
+    },
+    {
+      firstName: 'Andy',
+      lastName: 'Nagpal',
+      src: require('./Images/Andy_profile_pix.png'),
+      phone: '226-666-9558',
+      website: 'andynagpal.com'
+    }
+  ]
+
   render() {
     return (
       <div className="App">
         <AppHeader />
         {this.state.showRadio === true ? <RadioWidget /> : <NextShow />}
         <ShowTimings timings={this.showTimings}/>
-        <Contact />
+        <Contact contacts={this.contacts}/>
         <ChatBot />
         <FacebookWidget 
             fbID="https://www.facebook.com/Bollywood-Mix-352859711847144/"
