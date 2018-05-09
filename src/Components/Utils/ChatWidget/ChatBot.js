@@ -40,7 +40,10 @@ const ChatBot = () => {
             </div>
 
             <div className="col-md-4 text-center d-sm-none">
-              <InquiryForm />
+              <InquiryForm 
+                msg="I appreciate your interest in Bollywood Mix Radio."
+                name="Andy"
+              />
             </div>
       </div>
 

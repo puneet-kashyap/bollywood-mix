@@ -112,13 +112,17 @@ class InquiryForm extends Component {
       );
     } else {
       return (
-        <InquiryThanks />
+        <InquiryThanks 
+          msg= {this.props.msg}
+          name={this.props.name}
+        />
       )
     }
   }
 }
 
-const InquiryThanks = () => {
+const InquiryThanks = (props) => {
+  console.log(props)
   return (
     <div className="row" style={{'padding':'25px'}}>
       <Paper style={{'padding':'10px','background':'ghostwhite'}}>
@@ -129,11 +133,11 @@ const InquiryThanks = () => {
         We would love to play your song.
       </p>
       <p className="text-left">
-        I appreciate your interest in Bollywood Mix Radio.
+        {props.msg}
       </p>
       <Typography type="display1" align='right' component="h1" color="primary"
         style={{'padding':'10px', 'fontFamily':'Ruthie'}}>
-        Andy.
+        {props.name}.
       </Typography>
     </Paper>
   </div>
