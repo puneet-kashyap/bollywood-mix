@@ -34,7 +34,8 @@ class InquiryForm extends Component {
   render () {
     if (this.state.form === 'blank') {
       return (
-        <div>
+        // d-sm-none
+        <div className="row col-md-4 text-center d-sm-none">
           <Paper style={{'padding':'15px','margin':'10px','background':'ghostwhite'}} className="text-center">
             <Typography type="display1" color="primary">
               Request a Song
