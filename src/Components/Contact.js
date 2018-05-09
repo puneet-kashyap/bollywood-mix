@@ -1,7 +1,6 @@
 import React from 'react';
 import Card, { CardContent } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
-
 import Advertisement from './Utils/Advertisement';
 
 const Contact = () => {
@@ -71,7 +70,6 @@ const Contact = () => {
                   href="https://andynagpal.com/insurance"/>
               </div>
           </div>
-
       </div>
 );
 

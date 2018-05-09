@@ -54,7 +54,10 @@ class App extends Component {
         <ShowTimings />
         <Contact />
         <ChatBot />
-        <FacebookWidget />
+        <FacebookWidget 
+            fbID="https://www.facebook.com/Bollywood-Mix-352859711847144/"
+            message="Bollywood Mix. Your favorite radio show in TriCity."
+        />
         <AppFooter />
       </div>
     );
