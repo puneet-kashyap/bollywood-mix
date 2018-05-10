@@ -14,6 +14,8 @@ import RadioWidget from '../Components/RadioWidget';
 import Contact from '../Components/Contact';
 import InquiryForm from './Utils/InquiryForm';
 import {ShowTimings} from '../Components/ShowTimings';
+import {NextShow} from '../Components/NextShow';
+import RefreshPage from '../Components/Utils/RefreshPage';
 
 
 const styles = {
@@ -49,8 +51,25 @@ class African extends Component {
       }
     
     componentDidMount(){
-        document.title = "Sauti za Africa"
+        document.title = "Sauti za Africa";
+        this.showWidget();
+        RefreshPage(14,0,0);
+        RefreshPage(15,0,0);
     }
+
+    showWidget = () => {
+        if (this.state.date.day() === 6 || this.state.date.day() === 7) {
+          if ((this.state.date.hours() === 14)){
+            this.setState({showRadio:true})
+            console.log("Show is ON.")
+          } else {
+            console.log("Wait for the show");
+            // console.log(moment().tz("America/Toronto").format());
+          }
+        } else {
+          console.log("Show will be live on the weekend.");
+        }
+      }
 
     showTimings = [
         {day:'Saturday',start:14,stop:15},
@@ -72,7 +91,7 @@ class African extends Component {
                     </Toolbar>
                 </AppBar>
 
-                <RadioWidget />
+                {this.state.showRadio === true ? <RadioWidget /> : <NextShow />}
 
                 <ShowTimings timings={this.showTimings}/>
 
