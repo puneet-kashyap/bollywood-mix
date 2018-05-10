@@ -49,12 +49,12 @@ class African extends Component {
       }
     
     componentDidMount(){
-        document.title = "African Music"
+        document.title = "Sauti za Africa"
     }
 
     showTimings = [
-        {day:'Saturday',start:11,stop:12},
-        {day:'Sunday',start:11,stop:12}
+        {day:'Saturday',start:14,stop:15},
+        {day:'Sunday',start:14,stop:15}
       ]
 
     render(){
@@ -67,7 +67,7 @@ class African extends Component {
                         <HomeIcon />
                     </IconButton>
                     <Typography id="home-text-link" component={Link} to="/African" type="title" color="inherit" className={classes.flex}>
-                        African Music
+                        Sauti za Africa
                     </Typography>
                     </Toolbar>
                 </AppBar>
@@ -79,7 +79,7 @@ class African extends Component {
                 <Contact contacts={contacts}/>
                 
                 <InquiryForm 
-                    msg="I appreciate your interest in African Radio."
+                    msg="I appreciate your interest in Sauti za Africa Radio."
                     name="Yasin"
                 />
                 {/* <FacebookWidget 

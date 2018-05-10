@@ -23,7 +23,7 @@ const Contact = (props) => {
                               <img src={contact.src} className="img-fluid center-block" alt={contact.name}/>
                               <p><span>
                                 <br/><b>Host</b>
-                                <br/>Ph.# <a id={`${contact.firstName}-phone-number`} href={`tel:+1${contact.phone}`}>${contact.phone}</a>
+                                <br/>Ph.# <a id={`${contact.firstName}-phone-number`} href={`tel:+1${contact.phone}`}>{contact.phone}</a>
                                 <br/>
                                 <a id={`${contact.firstName}-website`} href={`https://${contact.website}`}
                                   rel="noopener noreferrer" target="_blank">{contact.website}

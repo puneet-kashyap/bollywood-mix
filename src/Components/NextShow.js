@@ -65,7 +65,7 @@ export class NextShow extends Component {
         <div className="align-self-center" style={{'paddingBottom':'16px'}}>
           <CardContent>
             <Typography type="display1" color="primary">Next Show</Typography>
-            Bollywood Mix will be live soon at {this.state.showTime}.
+            Bollywood Mirchi will be live soon at {this.state.showTime}.
           </CardContent>
 
           <CardContent>
