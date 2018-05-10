@@ -8,8 +8,8 @@ const Contact = (props) => {
     return (
       <div className="container">
           <div className="row" style={{'padding':'15px','justifyContent':'center'}}>
-              {props.contacts.map(contact =>
-                <div className="col-md-5">
+              {props.contacts.map((contact, index) =>
+                <div key={index} className="col-md-5">
                     <Card style={{
                       'textAlign':'center',
                       'margin':'10px',
