@@ -32,7 +32,7 @@ function AppHeader(props) {
             <HomeIcon />
           </IconButton>
           <Typography id="home-text-link" component={Link} to="/" type="title" color="inherit" className={classes.flex}>
-              Bollywood Mix
+              Bollywood Mirchi
           </Typography>
           <Button id="archives-button" raised component={Link} to="/Archives" color="primary">Archives</Button>
         </Toolbar>

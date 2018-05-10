@@ -45,10 +45,10 @@ class AppFooter extends React.Component {
           <BottomNavigationAction id="linkedin-icon" label="LinkedIn" icon={<EntypoLinkedinWithCircle />} />
         </BottomNavigation>
         <Typography align='center' type="caption"  color="inherit" style={{'padding':'5px'}}>
-            Copyright &copy; Bollywood Mix {new Date().getFullYear()}<br/>
+            Copyright &copy; Bollywood Mirchi {new Date().getFullYear()}<br/>
             Built with 💖 by <u>
               <a id="footer-email" href={`mailto:kashyap@bollywoodmix.info`}>
-                Bollywood Mix
+                Bollywood Mirchi
               </a></u>  Fans Club.
         </Typography>
       </div>
