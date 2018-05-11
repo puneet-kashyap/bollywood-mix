@@ -93,7 +93,7 @@ export class NextShow extends Component {
             :null
           }
 
-          <Tooltip title="BollywoodMix Show in not live right now.">
+          <Tooltip title="Your favorite Radio Show in not live right now.">
           <div id="disabled-play-button" style={{'alignItems':'center'}}>
                 <Button raised aria-label="Play/pause" color="secondary" disabled>
                     Play
