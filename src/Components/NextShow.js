@@ -102,7 +102,7 @@ export class NextShow extends Component {
           </div>
           </Tooltip>
 
-          {this.state.notified === false ?
+          {/* {this.state.notified === false ?
             <Tooltip title="We will notify you once the show is Live.">
             <div style={{'alignItems':'center', 'paddingTop':'25px'}}>
                   <Button id="notify-me" raised aria-label="Notify Me" color="primary" onClick={this.notifyMe}>
@@ -111,7 +111,7 @@ export class NextShow extends Component {
             </div>
             </Tooltip>
           : <div/>
-          }
+          } */}
 
         </div>
       </Card>
