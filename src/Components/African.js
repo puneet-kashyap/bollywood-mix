@@ -91,7 +91,10 @@ class African extends Component {
                     </Toolbar>
                 </AppBar>
 
-                {this.state.showRadio === true ? <RadioWidget /> : <NextShow />}
+                {this.state.showRadio === true ? 
+                    <RadioWidget /> : 
+                    <NextShow showCountDown={false} showName="Sauti za Africa"/> 
+                }
 
                 <ShowTimings timings={this.showTimings}/>
 

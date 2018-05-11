@@ -76,7 +76,10 @@ class App extends Component {
     return (
       <div className="App">
         <AppHeader />
-        {this.state.showRadio === true ? <RadioWidget /> : <NextShow />}
+        {this.state.showRadio === true ? 
+          <RadioWidget /> : 
+          <NextShow showCountDown={true} showName="Bollywood Mirchi"/>
+        }
         <ShowTimings timings={this.showTimings}/>
         <Contact contacts={this.contacts}/>
         <ChatBot />
