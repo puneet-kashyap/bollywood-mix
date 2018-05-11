@@ -65,30 +65,33 @@ export class NextShow extends Component {
         <div className="align-self-center" style={{'paddingBottom':'16px'}}>
           <CardContent>
             <Typography type="display1" color="primary">Next Show</Typography>
-            Bollywood Mirchi will be live soon at {this.state.showTime}.
+            {`${this.props.showName} will be live soon.`}
+            {/* {`${this.props.showName} will be live soon at ${this.state.showTime}.`} */}
           </CardContent>
-
-          <CardContent>
-            Next show will be live in : <br/>
-            <div id="clockdiv"className="row">
-              {/* <div>
-                <span className="days"></span>
-                <div className="smalltext">Days</div>
-              </div> */}
-              <div>
-                <span className="hours">{this.state.now[0]}</span>
-                <div className="smalltext">Hours</div>
+          {this.props.showCountDown ? 
+            <CardContent>
+              Next show will be live in : <br/>
+              <div id="clockdiv"className="row">
+                {/* <div>
+                  <span className="days"></span>
+                  <div className="smalltext">Days</div>
+                </div> */}
+                <div>
+                  <span className="hours">{this.state.now[0]}</span>
+                  <div className="smalltext">Hours</div>
+                </div>
+                <div>
+                  <span className="minutes">{this.state.now[1]}</span>
+                  <div className="smalltext">Minutes</div>
+                </div>
+                <div>
+                  <span className="seconds">{this.state.now[2]}</span>
+                  <div className="smalltext">Seconds</div>
+                </div>
               </div>
-              <div>
-                <span className="minutes">{this.state.now[1]}</span>
-                <div className="smalltext">Minutes</div>
-              </div>
-              <div>
-                <span className="seconds">{this.state.now[2]}</span>
-                <div className="smalltext">Seconds</div>
-              </div>
-            </div>
-          </CardContent>
+            </CardContent>
+            :null
+          }
 
           <Tooltip title="BollywoodMix Show in not live right now.">
           <div id="disabled-play-button" style={{'alignItems':'center'}}>
