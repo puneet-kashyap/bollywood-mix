@@ -31,7 +31,7 @@ const ChatBot = () => {
 
             <div className="col-md-3 d-none d-md-block">
               <Advertisement  id='mortgage-ad' src={require('../../../Images/Mortgage_ad.jpg')}
-                href="http://andynagpal.info"/>
+                href="http://jaspreetdhugga.com/"/>
             </div>
 
             <div className="col-md-3 d-sm-none">
@@ -47,9 +47,9 @@ const ChatBot = () => {
             </div>
       </div>
 
-      <div className="d-sm-none">
+      <div className="d-md-none">
         <Advertisement  id='mortgage-ad' src={require('../../../Images/Mortgage_ad.jpg')}
-          href="http://andynagpal.info"/>
+          href="http://jaspreetdhugga.com/"/>
       </div>
 
   </div>
