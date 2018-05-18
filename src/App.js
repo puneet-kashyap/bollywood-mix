@@ -31,10 +31,12 @@ class App extends Component {
 
   showWidget = () => {
     if (this.state.date.day() > 0 && this.state.date.day() < 6) {
+      // Monday to Friday
       if ((this.state.date.hours() === 10)){
         this.setState({showRadio:true})
         console.log("Show is ON.")
-      } else if (this.state.date.day() === 5 && this.state.date.hours() === 17) {
+      } else if (this.state.date.day() > 3  && this.state.date.hours() === 17) {
+        // Thursday and Friday Evening show
         this.setState({showRadio:true})
         console.log("Evening show is ON.")
       } else {
@@ -51,6 +53,7 @@ class App extends Component {
     {day:'Tuesday',start:10,stop:11},
     {day:'Wednesday',start:10,stop:11},
     {day:'Thursday',start:10,stop:11},
+    {day:'Thursday',start:17,stop:18},
     {day:'Friday',start:10,stop:11},
     {day:'Friday (Wealth-101)',start:17,stop:18}
   ]
