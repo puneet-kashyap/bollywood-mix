@@ -25,6 +25,8 @@ class App extends Component {
     this.showWidget();
     RefreshPage(10,0,0);
     RefreshPage(11,0,0);
+    RefreshPage(15,0,0);
+    RefreshPage(16,0,0);
     RefreshPage(17,0,0);
     RefreshPage(18,0,0);
   }
@@ -43,6 +45,10 @@ class App extends Component {
         console.log("Wait for the show");
         // console.log(moment().tz("America/Toronto").format());
       }
+    } else if(this.state.date.day() === 0 && this.state.date.hours() === 15){
+      // Sunday Show
+      this.setState({showRadio:true})
+      console.log("Show is ON.")
     } else {
       console.log("Show will be live next week.");
     }
@@ -55,7 +61,8 @@ class App extends Component {
     {day:'Thursday',start:10,stop:11},
     {day:'Thursday',start:17,stop:18},
     {day:'Friday',start:10,stop:11},
-    {day:'Friday (Wealth-101)',start:17,stop:18}
+    {day:'Friday',start:17,stop:18},
+    {day:'Sunday',start:15,stop:16}
   ]
 
   contacts = [
