@@ -96,18 +96,14 @@ class African extends Component {
                     <NextShow showCountDown={false} showName="Sauti za Africa"/> 
                 }
 
-                <ShowTimings timings={this.showTimings}/>
+                <ShowTimings timings={this.showTimings} show='none'/>
 
-                <Contact contacts={contacts}/>
+                <Contact contacts={contacts} show='none'/>
                 
                 <InquiryForm 
                     msg="I appreciate your interest in Sauti za Africa Radio."
                     name="Yasin"
                 />
-                {/* <FacebookWidget 
-                    fbID="https://www.facebook.com/Bollywood-Mix-352859711847144/"
-                    message="Bollywood Mix. Your favorite radio show in TriCity."
-                /> */}
 
             </div>
         );

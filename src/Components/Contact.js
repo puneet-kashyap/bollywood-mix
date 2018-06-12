@@ -39,7 +39,7 @@ const Contact = (props) => {
               
           </div>
 
-          <div className="row d-sm-none" style={{'padding':'15px','justifyContent':'center'}}>
+          <div className="row d-sm-none" style={{'padding':'15px','justifyContent':'center', 'display':props.show}}>
               <div className="col-md-4">
                 <Advertisement  id="insurance-ad" src={require('../Images/Insurance_ad.jpg')}
                   href="https://andynagpal.com/insurance"/>
