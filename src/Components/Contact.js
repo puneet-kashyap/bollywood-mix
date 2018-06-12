@@ -1,7 +1,7 @@
 import React from 'react';
 import Card, { CardContent } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
-// import Advertisement from './Utils/Advertisement';
+import Advertisement from './Utils/Advertisement';
 
 
 const Contact = (props) => {
@@ -39,12 +39,12 @@ const Contact = (props) => {
               
           </div>
 
-          {/* <div className="row d-sm-none" style={{'padding':'15px','justifyContent':'center'}}>
+          <div className="row d-sm-none" style={{'padding':'15px','justifyContent':'center'}}>
               <div className="col-md-4">
                 <Advertisement  id="insurance-ad" src={require('../Images/Insurance_ad.jpg')}
                   href="https://andynagpal.com/insurance"/>
               </div>
-          </div> */}
+          </div>
       </div>
 );
 

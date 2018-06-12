@@ -35,8 +35,8 @@ const ChatBot = () => {
             </div>
 
             <div className="col-md-3 d-sm-none">
-              <Advertisement id="womenhood-ad" src={require('../../../Images/Womanhood_ad.jpg')}
-                href="http://www.icacicanada.com/"/>
+              <Advertisement id="womenhood-ad" src={require('../../../Images/Royal_Indian_Buffet.jpg')}
+                href="http://www.royalindianbuffet.com/"/>
             </div>
 
             <div className="col-md-4 text-center d-sm-none">
