@@ -90,8 +90,8 @@ class App extends Component {
           <RadioWidget /> : 
           <NextShow showCountDown={true} showName="Bollywood Mirchi"/>
         }
-        <ShowTimings timings={this.showTimings}/>
-        <Contact contacts={this.contacts}/>
+        <ShowTimings timings={this.showTimings} show='true'/>
+        <Contact contacts={this.contacts} show='true'/>
         <ChatBot />
         <FacebookWidget 
             fbID="https://www.facebook.com/Bollywood-Mix-352859711847144/"

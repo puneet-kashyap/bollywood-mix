@@ -3,7 +3,7 @@ import Card, { CardContent } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 import { LocalTime } from './Utils/TimeMoment';
-// import Advertisement from './Utils/Advertisement';
+import Advertisement from './Utils/Advertisement';
 
 
 export const ShowTimings = (props) => {
@@ -19,10 +19,10 @@ return(
   <div className="container">
     <div className="row" style={{'padding':'15px','justifyContent':'center','alignItems':'center'}}>
 
-      {/* <div className="col-md-3">
+      <div className="col-md-3" style={{'display': props.show}}>
         <Advertisement id="first-time-buyers-ad" src={require('../Images/Andy_ad1.jpeg')}
           href="https://andynagpal.com/first-time-buyers"/>
-      </div> */}
+      </div>
 
         <div className="col-md-6">
             <Card style={{
@@ -55,13 +55,14 @@ return(
             </Card>
       </div>
 
-      {/* <div className="col-md-3 d-none d-md-block">
-        <Advertisement  id="free-home-evaluation-ad" src={require('../Images/Home_Evaluation_ad.png')}
+      <div className="col-md-3 " style={{'display': props.show}}>
+        <Advertisement  id="free-home-evaluation-ad"  style={{'display': props.show}}
+          src={require('../Images/Home_Evaluation_ad.png')}
           href="https://andynagpal.com/free-home-evaluation"/>
-      </div> */}
+      </div>
 
     </div>
-    {/* <div className="row d-sm-none" style={{'padding':'15px','justifyContent':'center'}}>
+    {/* <div className="row d-sm-none" style={{'padding':'15px','justifyContent':'center', 'display': props.show}}>
         <div className="col-md-4">
           <Advertisement  id="free-home-evaluation-ad" src={require('../Images/Home_Evaluation_ad.png')}
             href="https://andynagpal.com/free-home-evaluation"/>
