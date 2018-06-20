@@ -7,43 +7,44 @@ import { writeSongRequest } from '../../fire';
 import Tooltip from 'material-ui/Tooltip';
 
 class InquiryForm extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
-      form:'blank',
-      date:'2018-12-28',
+    this.state = {
+      form: 'blank',
+      date: '2018-12-28',
       time: '10:30'
     }
   }
 
-  componentWillMount(){
+  componentWillMount() {
     const today = new Date();
-    const date = today.getFullYear()+'-'+('0'+(today.getMonth()+1)).slice(-2)+'-'+
-    ('0'+(today.getDate()+1)).slice(-2)
-    this.setState({date:date})
+    const date = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' +
+      ('0' + (today.getDate() + 1)).slice(-2)
+    this.setState({ date: date })
   }
 
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   }
   submit = () => {
-    this.setState({form:'filled'})
+    this.setState({ form: 'filled' })
     console.log(this.state);
     writeSongRequest(this.state);
   }
-  render () {
+  render() {
     if (this.state.form === 'blank') {
       return (
         // d-sm-none
-        <div className="row col-md-4 text-center d-sm-none">
-          <Paper style={{'padding':'15px','margin':'10px','background':'ghostwhite'}} className="text-center">
-            <Typography type="display1" color="primary">
-              Request a Song
+        <div className="container">
+          <div className="row d-sm-none">
+            <Paper style={{ 'padding': '15px', 'background': 'ghostwhite' }} className="text-center">
+              <Typography type="display1" color="primary">
+                Request a Song
             </Typography>
-            <Typography>
-              Dedicate a song to your loved one.
+              <Typography>
+                Dedicate a song to your loved one.
             </Typography>
-            <form onSubmit={this.submit}>
+              <form onSubmit={this.submit}>
                 <Tooltip title="Your name please">
                   <TextField required
                     id="inquiry-form-name"
@@ -75,7 +76,7 @@ class InquiryForm extends Component {
                     defaultValue={this.state.date}
                     fullWidth={true}
                     onChange={this.handleChange}
-                    style={{'margin':'8px 0px 4px 0px'}}
+                    style={{ 'margin': '8px 0px 4px 0px' }}
                   />
                 </Tooltip>
                 <Tooltip title="At what time should we play the song ?">
@@ -87,7 +88,7 @@ class InquiryForm extends Component {
                     defaultValue={this.state.time}
                     fullWidth={true}
                     onChange={this.handleChange}
-                    style={{'margin':'8px 0px 4px 0px'}}
+                    style={{ 'margin': '8px 0px 4px 0px' }}
                   />
                 </Tooltip>
                 <Tooltip title="Name of the song you want to dedicte.">
@@ -98,7 +99,7 @@ class InquiryForm extends Component {
                     placeholder="Name of the song you want to dedicte."
                     onChange={this.handleChange}
                     fullWidth={true}
-                    style={{'marginBottom':'25px'}}
+                    style={{ 'marginBottom': '25px' }}
                   />
                 </Tooltip>
                 <Button raised
@@ -107,14 +108,16 @@ class InquiryForm extends Component {
                   color="primary">
                   Submit
                 </Button>
-          </form>
-        </Paper>
-      </div>
+              </form>
+            </Paper>
+          </div>
+        </div>
+
       );
     } else {
       return (
-        <InquiryThanks 
-          msg= {this.props.msg}
+        <InquiryThanks
+          msg={this.props.msg}
           name={this.props.name}
         />
       )
@@ -125,23 +128,23 @@ class InquiryForm extends Component {
 const InquiryThanks = (props) => {
   console.log(props)
   return (
-    <div className="row" style={{'padding':'25px'}}>
-      <Paper style={{'padding':'10px','background':'ghostwhite'}}>
-        <Typography type="display1" color="primary" style={{'paddingBottom':'10px'}} className="text-center">
+    <div className="row" style={{ 'padding': '25px' }}>
+      <Paper style={{ 'padding': '10px', 'background': 'ghostwhite' }}>
+        <Typography type="display1" color="primary" style={{ 'paddingBottom': '10px' }} className="text-center">
           Thank You.
         </Typography>
-      <p className="text-left">
-        We would love to play your song.
+        <p className="text-left">
+          We would love to play your song.
       </p>
-      <p className="text-left">
-        {props.msg}
-      </p>
-      <Typography type="display1" align='right' component="h1" color="primary"
-        style={{'padding':'10px', 'fontFamily':'Ruthie'}}>
-        {props.name}.
+        <p className="text-left">
+          {props.msg}
+        </p>
+        <Typography type="display1" align='right' component="h1" color="primary"
+          style={{ 'padding': '10px', 'fontFamily': 'Ruthie' }}>
+          {props.name}.
       </Typography>
-    </Paper>
-  </div>
+      </Paper>
+    </div>
   );
 }
 

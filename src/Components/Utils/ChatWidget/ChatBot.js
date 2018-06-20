@@ -34,10 +34,10 @@ const ChatBot = () => {
                 href="http://jaspreetdhugga.com/"/>
             </div>
 
-            <div className="col-md-3 d-sm-none">
+            {/* <div className="col-md-3 d-sm-none">
               <Advertisement id="womenhood-ad" src={require('../../../Images/Royal_Indian_Buffet.jpg')}
                 href="http://www.royalindianbuffet.com/"/>
-            </div>
+            </div> */}
 
             <div className="col-md-4 text-center d-sm-none">
               <InquiryForm 
