@@ -71,7 +71,7 @@ class App extends Component {
       lastName: 'Dewji',
       src: require('./Images/Yasin_Dewji.jpeg'),
       phone: '226-666-9558',
-      website: 'yasindewji.ca'
+      website: 'bollywoodmix.ca'
     },
     {
       firstName: 'Andy',
