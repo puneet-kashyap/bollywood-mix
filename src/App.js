@@ -9,7 +9,10 @@ import Contact from './Components/Contact';
 import ChatBot from './Components/Utils/ChatWidget/ChatBot';
 import FacebookWidget from './Components/Utils/FacebookWidget';
 import RefreshPage from './Components/Utils/RefreshPage';
-import './fire';
+// import './fire';
+// import { requestPermission } from './fire';
+
+import { retrieveAudios } from './fire';
 
 class App extends Component {
   constructor(props) {
@@ -18,10 +21,12 @@ class App extends Component {
       date: moment().tz("America/Toronto"),
       showRadio: false
     }
+    retrieveAudios();
   }
 
   onlineShow = new Audio('http://192.240.102.133:7703/stream');
-  offlineShow = new Audio(require('./Audios/BollywoodMirchi1.mp3'));
+  // offlineShow = new Audio(require('./Audios/BollywoodMirchi1.mp3'));
+  offlineShow = new Audio('https://firebasestorage.googleapis.com/v0/b/bollywoodmix-61cb0.appspot.com/o/Audios%2FAudio1.mp3?alt=media&token=700d2013-603f-4bcf-a93f-a784754f8a66');
 
   componentDidMount() {
     this.showWidget();

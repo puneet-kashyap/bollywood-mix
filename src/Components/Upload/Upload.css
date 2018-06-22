@@ -1,0 +1,13 @@
+.uploader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.container {
+    min-height: 100vh;
+} 
+
+.submitRow {
+    padding: 20px;
+}
