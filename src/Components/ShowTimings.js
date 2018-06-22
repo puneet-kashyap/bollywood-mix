@@ -42,8 +42,8 @@ return(
                         </TableRow>
                       </TableHead>
                       <TableBody>
-                        {weeklyShowTimes.map(item =>
-                            <TableRow key={item.day}>
+                        {weeklyShowTimes.map((item, index) =>
+                            <TableRow key={index}>
                                 <TableCell padding='none'>{item.day}</TableCell>
                                 <TableCell padding='none'>{item.time}</TableCell>
                             </TableRow>
