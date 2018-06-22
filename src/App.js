@@ -4,8 +4,8 @@ import './App.css';
 import AppHeader from './Components/AppHeader';
 import AppFooter from './Components/AppFooter';
 import RadioWidget from './Components/RadioWidget';
-import {ShowTimings} from './Components/ShowTimings';
-import {NextShow} from './Components/NextShow';
+import { ShowTimings } from './Components/ShowTimings';
+import { NextShow } from './Components/NextShow';
 import Contact from './Components/Contact';
 import ChatBot from './Components/Utils/ChatWidget/ChatBot';
 import FacebookWidget from './Components/Utils/FacebookWidget';
@@ -13,41 +13,44 @@ import RefreshPage from './Components/Utils/RefreshPage';
 import './fire';
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
+    this.state = {
       date: moment().tz("America/Toronto"),
       showRadio: false
     }
   }
 
-  componentDidMount(){
+  onlineShow = new Audio('http://192.240.102.133:7703/stream');
+  offlineShow = new Audio(require('./Audios/BollywoodMirchi1.mp3'));
+
+  componentDidMount() {
     this.showWidget();
-    RefreshPage(10,0,0);
-    RefreshPage(11,0,0);
-    RefreshPage(15,0,0);
-    RefreshPage(16,0,0);
-    RefreshPage(17,0,0);
-    RefreshPage(18,0,0);
+    RefreshPage(10, 0, 0);
+    RefreshPage(11, 0, 0);
+    RefreshPage(15, 0, 0);
+    RefreshPage(16, 0, 0);
+    RefreshPage(17, 0, 0);
+    RefreshPage(18, 0, 0);
   }
 
   showWidget = () => {
     if (this.state.date.day() > 0 && this.state.date.day() < 6) {
       // Monday to Friday
-      if ((this.state.date.hours() === 10)){
-        this.setState({showRadio:true})
+      if ((this.state.date.hours() === 10)) {
+        this.setState({ showRadio: true })
         console.log("Show is ON.")
-      } else if (this.state.date.day() > 3  && this.state.date.hours() === 17) {
+      } else if (this.state.date.day() > 3 && this.state.date.hours() === 17) {
         // Thursday and Friday Evening show
-        this.setState({showRadio:true})
+        this.setState({ showRadio: true })
         console.log("Evening show is ON.")
       } else {
         console.log("Wait for the show");
         // console.log(moment().tz("America/Toronto").format());
       }
-    } else if(this.state.date.day() === 0 && this.state.date.hours() === 15){
+    } else if (this.state.date.day() === 0 && this.state.date.hours() === 15) {
       // Sunday Show
-      this.setState({showRadio:true})
+      this.setState({ showRadio: true })
       console.log("Show is ON.")
     } else {
       console.log("Show will be live next week.");
@@ -55,14 +58,14 @@ class App extends Component {
   }
 
   showTimings = [
-    {day:'Monday',start:10,stop:11},
-    {day:'Tuesday',start:10,stop:11},
-    {day:'Wednesday',start:10,stop:11},
-    {day:'Thursday',start:10,stop:11},
-    {day:'Thursday',start:17,stop:18},
-    {day:'Friday',start:10,stop:11},
-    {day:'Friday',start:17,stop:18},
-    {day:'Sunday',start:15,stop:16}
+    { day: 'Monday', start: 10, stop: 11 },
+    { day: 'Tuesday', start: 10, stop: 11 },
+    { day: 'Wednesday', start: 10, stop: 11 },
+    { day: 'Thursday', start: 10, stop: 11 },
+    { day: 'Thursday', start: 17, stop: 18 },
+    { day: 'Friday', start: 10, stop: 11 },
+    { day: 'Friday', start: 17, stop: 18 },
+    { day: 'Sunday', start: 15, stop: 16 }
   ]
 
   contacts = [
@@ -86,16 +89,17 @@ class App extends Component {
     return (
       <div className="App">
         <AppHeader />
-        {this.state.showRadio === true ? 
-          <RadioWidget /> : 
-          <NextShow showCountDown={true} showName="Bollywood Mirchi"/>
+        {this.state.showRadio === true ?
+          <RadioWidget play={this.onlineShow} status="Listen"/> :
+          <RadioWidget play={this.offlineShow} status="Listen now"/>
+          // <NextShow showCountDown={true} showName="Bollywood Mirchi"/>
         }
-        <ShowTimings timings={this.showTimings} show='true'/>
-        <Contact contacts={this.contacts} show='true'/>
+        <ShowTimings timings={this.showTimings} show='true' />
+        <Contact contacts={this.contacts} show='true' />
         <ChatBot />
-        <FacebookWidget 
-            fbID="https://www.facebook.com/Bollywood-Mix-352859711847144/"
-            message="Bollywood Mix. Your favorite radio show in TriCity."
+        <FacebookWidget
+          fbID="https://www.facebook.com/Bollywood-Mix-352859711847144/"
+          message="Bollywood Mix. Your favorite radio show in TriCity."
         />
         <AppFooter />
       </div>

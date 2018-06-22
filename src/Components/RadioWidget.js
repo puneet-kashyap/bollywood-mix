@@ -10,7 +10,7 @@ class RadioWidget extends Component {
     super(props);
     this.state={
       playing:false,
-      audio:new Audio('http://192.240.102.133:7703/stream'),
+      audio : props.play,
       playButtonId:'play-button'
     }
   }
@@ -38,7 +38,7 @@ class RadioWidget extends Component {
       }}>
         <div style={{'paddingBottom':'16px'}}>
           <CardContent>
-            <Typography type="display1" color="primary">Listen live</Typography>
+            <Typography type="display1" color="primary">{this.props.status}</Typography>
           </CardContent>
           <div style={{'alignItems':'center'}}>
             <Tooltip title="Enjoy the Show.">
