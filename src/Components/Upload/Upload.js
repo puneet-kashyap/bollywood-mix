@@ -34,7 +34,7 @@ class Upload extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container uploadContainer">
                 <div className="row">
                     <div className="col uploader">
                         <h3>Upload your Show</h3>

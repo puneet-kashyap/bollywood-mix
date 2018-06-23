@@ -14,7 +14,7 @@ firebase.initializeApp(config);
 const messaging = firebase.messaging();
 const database = firebase.database();
 const storageRef = firebase.storage().ref();
-const firebaseAudios = storageRef.child('Audios/Audio1.mp3');
+// const firebaseAudios = storageRef.child('Audios/Audio1.mp3');
 const uploadAudiosRef = storageRef.child('Upload/')
 
 const storeDeviceTokens = (token) => {
@@ -49,8 +49,7 @@ export const writeSongRequest = (data) => {
 }
 
 export const retrieveAudios = () => {
-  console.log('Hello');
-  console.log(firebaseAudios);
+  // console.log(firebaseAudios);
 }
 
 export const uploadAudio = (name, category, audioFile) => {
