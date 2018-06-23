@@ -9,7 +9,6 @@ import Contact from './Components/Contact';
 import ChatBot from './Components/Utils/ChatWidget/ChatBot';
 import FacebookWidget from './Components/Utils/FacebookWidget';
 import RefreshPage from './Components/Utils/RefreshPage';
-import './fire';
 
 class App extends Component {
   constructor(props) {
@@ -20,8 +19,14 @@ class App extends Component {
     }
   }
 
-  onlineShow = new Audio('http://192.240.102.133:7703/stream');
-  offlineShow = new Audio(require('./Audios/BollywoodMirchi1.mp3'));
+  playShow = () => {
+    if ( this.state.showRadio === true){
+      return new Audio('http://192.240.102.133:7703/stream');
+    } else {
+      return new Audio(require('./Audios/BollywoodMirchi1.mp3'));
+    }
+  }
+  // offlineShow = new Audio('https://firebasestorage.googleapis.com/v0/b/bollywoodmix-61cb0.appspot.com/o/Audios%2FAudio1.mp3?alt=media&token=700d2013-603f-4bcf-a93f-a784754f8a66');
 
   componentDidMount() {
     this.showWidget();
@@ -85,14 +90,17 @@ class App extends Component {
   ]
 
   render() {
+    console.log(this.onlineShow)
     return (
       <div className="App">
         <AppHeader />
-        {this.state.showRadio === true ?
-          <RadioWidget play={this.onlineShow} status="Listen"/> :
+        <RadioWidget play={this.playShow()} status="Listen live"/>
+        {/* {this.state.showRadio === true ?
+          <RadioWidget play={this.playShow} status="Listen live"/> :
           <RadioWidget play={this.offlineShow} status="Listen now"/>
           // <NextShow showCountDown={true} showName="Bollywood Mirchi"/>
-        }
+        } */}
+        {this.state.showRadio}
         <ShowTimings timings={this.showTimings} show='true' />
         <Contact contacts={this.contacts} show='true' />
         <ChatBot />
