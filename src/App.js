@@ -19,15 +19,6 @@ class App extends Component {
     }
   }
 
-  playShow = () => {
-    if ( this.state.showRadio === true){
-      return new Audio('http://192.240.102.133:7703/stream');
-    } else {
-      return new Audio(require('./Audios/BollywoodMirchi1.mp3'));
-    }
-  }
-  // offlineShow = new Audio('https://firebasestorage.googleapis.com/v0/b/bollywoodmix-61cb0.appspot.com/o/Audios%2FAudio1.mp3?alt=media&token=700d2013-603f-4bcf-a93f-a784754f8a66');
-
   componentDidMount() {
     this.showWidget();
     RefreshPage(10, 0, 0);
@@ -55,7 +46,7 @@ class App extends Component {
     } else if (this.state.date.day() === 0 && this.state.date.hours() === 15) {
       // Sunday Show
       this.setState({ showRadio: true })
-      console.log("Show is ON.")
+      console.log("Sunday show is ON.")
     } else {
       console.log("Show will be live next week.");
     }
@@ -90,17 +81,10 @@ class App extends Component {
   ]
 
   render() {
-    console.log(this.onlineShow)
     return (
       <div className="App">
         <AppHeader />
-        <RadioWidget play={this.playShow()} status="Listen live"/>
-        {/* {this.state.showRadio === true ?
-          <RadioWidget play={this.playShow} status="Listen live"/> :
-          <RadioWidget play={this.offlineShow} status="Listen now"/>
-          // <NextShow showCountDown={true} showName="Bollywood Mirchi"/>
-        } */}
-        {this.state.showRadio}
+        <RadioWidget status="Listen live" />
         <ShowTimings timings={this.showTimings} show='true' />
         <Contact contacts={this.contacts} show='true' />
         <ChatBot />
