@@ -4,7 +4,7 @@ import './App.css';
 import AppHeader from './Components/AppHeader';
 import AppFooter from './Components/AppFooter';
 import RadioWidget from './Components/RadioWidget';
-import { ShowTimings } from './Components/ShowTimings';
+// import { ShowTimings } from './Components/ShowTimings';
 import Contact from './Components/Contact';
 import ChatBot from './Components/Utils/ChatWidget/ChatBot';
 import FacebookWidget from './Components/Utils/FacebookWidget';
@@ -84,8 +84,8 @@ class App extends Component {
     return (
       <div className="App">
         <AppHeader />
-        <RadioWidget status="Listen live" />
-        <ShowTimings timings={this.showTimings} show='true' />
+        <RadioWidget status="Listen now" />
+        {/* <ShowTimings timings={this.showTimings} show='true' /> */}
         <Contact contacts={this.contacts} show='true' />
         <ChatBot />
         <FacebookWidget
