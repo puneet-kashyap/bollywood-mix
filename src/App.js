@@ -84,7 +84,7 @@ class App extends Component {
     return (
       <div className="App">
         <AppHeader />
-        <RadioWidget status="Listen live" />
+        <RadioWidget status="Listen now" />
         <ShowTimings timings={this.showTimings} show='true' />
         <Contact contacts={this.contacts} show='true' />
         <ChatBot />
