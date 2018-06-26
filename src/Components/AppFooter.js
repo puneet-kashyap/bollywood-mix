@@ -23,7 +23,7 @@ class AppFooter extends React.Component {
     } else if (value === 1) {
       window.open("https://www.facebook.com/bollywoodmixkw/","_blank");
     } else {
-      window.open("https://linkedin.com","_blank");
+      window.open("https://linkedin.com/in/andynagpal/","_blank");
     }
 
   };
