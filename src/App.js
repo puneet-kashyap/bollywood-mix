@@ -4,11 +4,11 @@ import './App.css';
 import AppHeader from './Components/AppHeader';
 import AppFooter from './Components/AppFooter';
 import RadioWidget from './Components/RadioWidget';
-// import { ShowTimings } from './Components/ShowTimings';
 import Contact from './Components/Contact';
 import ChatBot from './Components/Utils/ChatWidget/ChatBot';
 import FacebookWidget from './Components/Utils/FacebookWidget';
 import RefreshPage from './Components/Utils/RefreshPage';
+import Advertisement from './Components/Utils/Advertisement';
 
 class App extends Component {
   constructor(props) {
@@ -85,8 +85,15 @@ class App extends Component {
       <div className="App">
         <AppHeader />
         <RadioWidget status="Listen now" />
-        {/* <ShowTimings timings={this.showTimings} show='true' /> */}
+        <Advertisement class="d-sm-none" id="first-time-buyers-ad"
+          src={require('./Images/Andy_ad1.jpeg')}
+          href="https://andynagpal.com/first-time-buyers"
+        />
         <Contact contacts={this.contacts} show='true' />
+        <Advertisement class="d-sm-none" id="insurance-ad" 
+          src={require('./Images/Insurance_ad.jpg')}
+          href="https://andynagpal.com/insurance" 
+        />
         <ChatBot />
         <FacebookWidget
           fbID="https://www.facebook.com/Bollywood-Mix-352859711847144/"
