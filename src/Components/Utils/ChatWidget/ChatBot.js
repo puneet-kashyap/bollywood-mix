@@ -9,7 +9,7 @@ import Advertisement from '../Advertisement';
 const ChatBot = () => {
   return (
     <div className="container-fluid"
-      style={{ background: "radial-gradient(red, yellow)" }}>
+      style={{ background: "url(" + require('../../../Images/purple-music.jpg') + ")", backgroundSize: 'cover' }}>
       <div className="row" style={{ 'justifyContent': 'center', 'alignItems': 'center' }}>
 
         <div className="col-md-3 d-none d-md-block">
@@ -34,11 +34,6 @@ const ChatBot = () => {
           <Advertisement id='mortgage-ad' src={require('../../../Images/Mortgage_ad.jpg')}
             href="http://jaspreetdhugga.com/" />
         </div>
-
-        {/* <div className="col-md-3 d-sm-none">
-              <Advertisement id="womenhood-ad" src={require('../../../Images/Royal_Indian_Buffet.jpg')}
-                href="http://www.royalindianbuffet.com/"/>
-            </div> */}
 
         <div className="col-md-4 text-center d-sm-none">
           <InquiryForm
