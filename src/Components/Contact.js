@@ -4,14 +4,14 @@ import Typography from 'material-ui/Typography';
 
 const Contact = (props) => {
   return (
-    <div className="container-fluid" style={{ background: "url(" + require('../Images/purple-music.jpg') + ")" }}>
+    <div className="container-fluid"
+      style={{ background: "radial-gradient(red, blue)" }}>
       <div className="row" style={{ 'justifyContent': 'center' }}>
         {props.contacts.map((contact, index) =>
           <div key={index} className="col-md-5">
             <Card style={{
               'textAlign': 'center',
               'margin': '10px',
-              // 'padding': '5px',
               'background': 'ghostwhite'
             }}>
               <div className="align-self-center">
