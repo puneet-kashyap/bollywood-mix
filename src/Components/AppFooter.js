@@ -33,11 +33,12 @@ class AppFooter extends React.Component {
     const { value } = this.state;
 
     return (
-      <div>
+      <div className="container-fluid">
         <BottomNavigation
           value={value}
           onChange={this.handleChange}
           showLabels
+          style={{backgroundColor: 'antiquewhite'}}
           className={classes.root}
         >
           <BottomNavigationAction id="twitter-icon" label="Twitter" icon={<EntypoTwitterWithCircle />} />

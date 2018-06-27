@@ -90,6 +90,10 @@ class App extends Component {
           href="https://andynagpal.com/first-time-buyers"
         />
         <Contact contacts={this.contacts} show='true' />
+        <Advertisement class="d-sm-none" id="insurance-ad" 
+          src={require('./Images/Insurance_ad.jpg')}
+          href="https://andynagpal.com/insurance" 
+        />
         <ChatBot />
         <FacebookWidget
           fbID="https://www.facebook.com/Bollywood-Mix-352859711847144/"

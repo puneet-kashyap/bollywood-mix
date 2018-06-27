@@ -39,7 +39,7 @@ class RadioWidget extends Component {
   render() {
     return (
       <div className="container-fluid"
-        style={{ background: "url(" + require('../Images/music-background.jpg') + ")" }}>
+        style={{ background: "radial-gradient(red, yellow, green)" }}>
         <div className="row" style={{ justifyContent: 'center', padding: '50px 0px' }}>
           <div className="col-md-6">
             <Card style={{
