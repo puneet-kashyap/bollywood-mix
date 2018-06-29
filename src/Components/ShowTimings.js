@@ -62,12 +62,6 @@ return(
       </div>
 
     </div>
-    {/* <div className="row d-sm-none" style={{'padding':'15px','justifyContent':'center', 'display': props.show}}>
-        <div className="col-md-4">
-          <Advertisement  id="free-home-evaluation-ad" src={require('../Images/Home_Evaluation_ad.png')}
-            href="https://andynagpal.com/free-home-evaluation"/>
-        </div>
-    </div> */}
   </div>
 )
 }
