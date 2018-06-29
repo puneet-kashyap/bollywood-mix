@@ -35,7 +35,7 @@ const contacts = [
         firstName: 'Yasin',
         lastName: 'Dewji',
         src: require('../Images/Yasin_Dewji.jpeg'),
-        phone: '226-666-9558',
+        phone: '416-527-4445',
         website: 'yasindewji.ca'
     }
 ]
