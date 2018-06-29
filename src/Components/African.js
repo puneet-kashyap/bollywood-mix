@@ -10,7 +10,6 @@ import { Link } from 'react-router-dom';
 import moment from 'moment-timezone';
 
 import RadioWidget from '../Components/RadioWidget';
-// import FacebookWidget from '../Components/Utils/FacebookWidget';
 import Contact from '../Components/Contact';
 import InquiryForm from './Utils/InquiryForm';
 import { ShowTimings } from '../Components/ShowTimings';
@@ -66,7 +65,6 @@ class African extends Component {
                 console.log("Show is ON.")
             } else {
                 console.log("Wait for the show");
-                // console.log(moment().tz("America/Toronto").format());
             }
         } else {
             console.log("Show will be live on the weekend.");

@@ -55,7 +55,7 @@ class RadioWidget extends Component {
                 </CardContent>
                 <div style={{ 'alignItems': 'center' }}>
                   {this.state.audio ?
-                    <audio controls controlsList="nodownload">
+                    <audio id="audio-player" controls controlsList="nodownload">
                       <source src={this.state.audio} type="audio/mpeg" />
                     </audio> : ""
                   }
