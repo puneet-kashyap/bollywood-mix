@@ -7,7 +7,6 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import Archives from './Components/Archives';
 import African from './Components/African';
-import Upload from './Components/Upload/Upload';
 
 ReactDOM.render((
   <BrowserRouter forceRefresh={true}>
@@ -15,7 +14,7 @@ ReactDOM.render((
       <Route exact path='/' component={App}/>
       <Route exact path='/Archives' component={Archives}/>
       <Route exact path='/African' component={African}/>
-      <Route exact path='/Upload' component={Upload}/>
+      <Route component={App} />
     </Switch>
   </BrowserRouter>
 ),document.getElementById('root'));
