@@ -85,14 +85,14 @@ class App extends Component {
       <div className="App">
         <AppHeader />
         <RadioWidget status="Listen now" />
+        <Advertisement id="free-home-evaluation-ad"
+          src={require('./Images/Home_Evaluation_ad.png')}
+          href="https://andynagpal.com/free-home-evaluation"
+        />
+        <Contact contacts={this.contacts} show='true' />
         <Advertisement class="d-sm-none" id="first-time-buyers-ad"
           src={require('./Images/Andy_ad1.jpeg')}
           href="https://andynagpal.com/first-time-buyers"
-        />
-        <Contact contacts={this.contacts} show='true' />
-        <Advertisement class="d-sm-none" id="insurance-ad" 
-          src={require('./Images/Insurance_ad.jpg')}
-          href="https://andynagpal.com/insurance" 
         />
         <ChatBot />
         <FacebookWidget
