@@ -30,7 +30,7 @@ const ChatBot = () => {
           </Card>
         </div>
 
-        <div className="col-md-3 d-none d-md-block">
+        <div className="col-md-3 d-md-block">
           <Advertisement id='mortgage-ad' src={require('../../../Images/Mortgage_ad.jpg')}
             href="http://jaspreetdhugga.com/" />
         </div>
@@ -43,9 +43,10 @@ const ChatBot = () => {
         </div>
       </div>
 
-      <div className="d-md-none">
-        <Advertisement id='mortgage-ad' src={require('../../../Images/Mortgage_ad.jpg')}
-          href="http://jaspreetdhugga.com/" />
+      <div className="d-md-none" style={{backgroundColor: 'white'}}>
+        <Advertisement id="free-home-evaluation-ad"
+          src={require('../../../Images/Home_Evaluation_ad.png')}
+          href="https://andynagpal.com/free-home-evaluation" />
       </div>
 
     </div>
