@@ -43,10 +43,11 @@ const ChatBot = () => {
         </div>
       </div>
 
-      <div className="d-md-none" style={{backgroundColor: 'white'}}>
-        <Advertisement id="free-home-evaluation-ad"
-          src={require('../../../Images/Home_Evaluation_ad.png')}
-          href="https://andynagpal.com/free-home-evaluation" />
+      <div className="d-md-none" >
+        <Advertisement class="d-sm-none" id="insurance-ad"
+          src={require('../../../Images/Insurance_ad.jpg')}
+          href="https://andynagpal.com/insurance"
+        />
       </div>
 
     </div>
