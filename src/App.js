@@ -85,7 +85,7 @@ class App extends Component {
       <div className="App">
         <AppHeader />
         <RadioWidget status="Listen now" />
-        <Advertisement id="free-home-evaluation-ad"
+        <Advertisement class="d-sm-none" id="free-home-evaluation-ad"
           src={require('./Images/Home_Evaluation_ad.png')}
           href="https://andynagpal.com/free-home-evaluation"
         />
