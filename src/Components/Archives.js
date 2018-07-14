@@ -13,23 +13,23 @@ const youtubeVideos = [
 
 ]
 
-const Archives  = () => {
+const Archives = () => {
   return (
     <div>
       <AppHeader />
       <div>
-        <Typography type="display1" component="h1" color="primary" style={{'padding':'25px','textAlign':'center'}}>
+        <Typography type="display1" component="h1" color="primary" style={{ 'padding': '25px', 'textAlign': 'center' }}>
           Bollywood Mix Archives
         </Typography>
-      <div className="row" id="youtube">
+        <div className="row" id="youtube">
           {youtubeVideos.map(item =>
-            <div key={item}  id={item} className="col-md-4 text-center" style={{'padding':'15px'}}>
+            <div key={item} id={item} className="col-md-4 text-center" style={{ 'padding': '15px' }}>
               <Card raised>
-                <Youtube src={item}/>
+                <Youtube src={item} />
               </Card>
             </div>
           )}
-      </div>
+        </div>
       </div>
 
       <AppFooter />

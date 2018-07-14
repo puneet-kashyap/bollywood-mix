@@ -13,12 +13,11 @@ const Youtube = (props) => {
             src={props.src}
             title="Andy Show"
             className="embed-responsive-item"
-            style={{'padding':'10px'}}
+            style={{ 'padding': '10px' }}
           />
         </Paper>
       </div>
-
-  </div>
+    </div>
   )
 }
 

@@ -7,7 +7,6 @@ import RadioWidget from './Components/RadioWidget';
 import Contact from './Components/Contact';
 import ChatBot from './Components/Utils/ChatWidget/ChatBot';
 import FacebookWidget from './Components/Utils/FacebookWidget';
-import RefreshPage from './Components/Utils/RefreshPage';
 import Advertisement from './Components/Utils/Advertisement';
 
 class App extends Component {
@@ -21,12 +20,6 @@ class App extends Component {
 
   componentDidMount() {
     this.showWidget();
-    RefreshPage(10, 0, 0);
-    RefreshPage(11, 0, 0);
-    RefreshPage(15, 0, 0);
-    RefreshPage(16, 0, 0);
-    RefreshPage(17, 0, 0);
-    RefreshPage(18, 0, 0);
   }
 
   showWidget = () => {

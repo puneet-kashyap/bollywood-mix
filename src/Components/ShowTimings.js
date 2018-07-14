@@ -10,58 +10,58 @@ export const ShowTimings = (props) => {
 
   let weeklyShowTimes = props.timings.map(element => {
     return ({
-      'day':element.day, 
-      'time':new LocalTime(element.start).format('hh:mm') + ' - ' + new LocalTime(element.stop).format('hh:mm a z')
+      'day': element.day,
+      'time': new LocalTime(element.start).format('hh:mm') + ' - ' + new LocalTime(element.stop).format('hh:mm a z')
     })
   });
 
-return(
-  <div className="container">
-    <div className="row" style={{'padding':'15px','justifyContent':'center','alignItems':'center'}}>
+  return (
+    <div className="container">
+      <div className="row" style={{ 'padding': '15px', 'justifyContent': 'center', 'alignItems': 'center' }}>
 
-      <div className="col-md-3" style={{'display': props.show}}>
-        <Advertisement id="first-time-buyers-ad" src={require('../Images/Andy_ad1.jpeg')}
-          href="https://andynagpal.com/first-time-buyers"/>
-      </div>
+        <div className="col-md-3" style={{ 'display': props.show }}>
+          <Advertisement id="first-time-buyers-ad" src={require('../Images/Andy_ad1.jpeg')}
+            href="https://andynagpal.com/first-time-buyers" />
+        </div>
 
         <div className="col-md-6">
-            <Card style={{
-              'textAlign':'center',
-              'margin':'10px',
-              'padding':'5px',
-              'background':'ghostwhite'
-            }}>
-                <div className="align-self-center">
-                  <CardContent>
-                    <Typography type="display1" color="primary">Show Timings</Typography>
-                    <Table>
-                      <TableHead>
-                        <TableRow>
-                          <TableCell>Day</TableCell>
-                          <TableCell>Timings</TableCell>
-                        </TableRow>
-                      </TableHead>
-                      <TableBody>
-                        {weeklyShowTimes.map((item, index) =>
-                            <TableRow key={index}>
-                                <TableCell padding='none'>{item.day}</TableCell>
-                                <TableCell padding='none'>{item.time}</TableCell>
-                            </TableRow>
-                        )}
-                      </TableBody>
-                    </Table>
-                  </CardContent>
-                </div>
-            </Card>
-      </div>
+          <Card style={{
+            'textAlign': 'center',
+            'margin': '10px',
+            'padding': '5px',
+            'background': 'ghostwhite'
+          }}>
+            <div className="align-self-center">
+              <CardContent>
+                <Typography type="display1" color="primary">Show Timings</Typography>
+                <Table>
+                  <TableHead>
+                    <TableRow>
+                      <TableCell>Day</TableCell>
+                      <TableCell>Timings</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {weeklyShowTimes.map((item, index) =>
+                      <TableRow key={index}>
+                        <TableCell padding='none'>{item.day}</TableCell>
+                        <TableCell padding='none'>{item.time}</TableCell>
+                      </TableRow>
+                    )}
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </div>
+          </Card>
+        </div>
 
-      <div className="col-md-3 " style={{'display': props.show}}>
-        <Advertisement  id="free-home-evaluation-ad"  style={{'display': props.show}}
-          src={require('../Images/Home_Evaluation_ad.png')}
-          href="https://andynagpal.com/free-home-evaluation"/>
-      </div>
+        <div className="col-md-3 " style={{ 'display': props.show }}>
+          <Advertisement id="free-home-evaluation-ad" style={{ 'display': props.show }}
+            src={require('../Images/Home_Evaluation_ad.png')}
+            href="https://andynagpal.com/free-home-evaluation" />
+        </div>
 
+      </div>
     </div>
-  </div>
-)
+  )
 }

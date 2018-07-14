@@ -14,7 +14,6 @@ firebase.initializeApp(config);
 const messaging = firebase.messaging();
 export const database = firebase.database();
 const storageRef = firebase.storage().ref();
-// const firebaseAudios = storageRef.child('Audios/Audio1.mp3');
 const uploadAudiosRef = storageRef.child('Upload/')
 
 const storeDeviceTokens = (token) => {

@@ -7,7 +7,7 @@ export const LocalTime = (estTime) => {
   // local time zone of the user
   const localZone = moment.tz.guess();
   if (estTime) {
-    return EstTime().set({'hour':estTime,'minute':0,'second':0}).tz(localZone);
+    return EstTime().set({ 'hour': estTime, 'minute': 0, 'second': 0 }).tz(localZone);
   } else {
     return EstTime().tz(localZone);
   }
@@ -15,11 +15,11 @@ export const LocalTime = (estTime) => {
 
 export const countDownShowTime = () => {
   const estTime = EstTime();
-  const showTime = () => EstTime().set({'hour':10,'minute':0,'second':0});
-  const eveningShow = () => EstTime().set({'hour':17,'minute':0,'second':0});
+  const showTime = () => EstTime().set({ 'hour': 10, 'minute': 0, 'second': 0 });
+  const eveningShow = () => EstTime().set({ 'hour': 17, 'minute': 0, 'second': 0 });
 
-  const nextDay = moment.duration(showTime().add(1,'day').diff(estTime)).as('minutes');
-  const dayAfterTomorrow = moment.duration(showTime().add(2,'day').diff(estTime)).as('minutes');
+  const nextDay = moment.duration(showTime().add(1, 'day').diff(estTime)).as('minutes');
+  const dayAfterTomorrow = moment.duration(showTime().add(2, 'day').diff(estTime)).as('minutes');
 
   var duration, remainingTime;
   let nextShowTime = showTime();
@@ -30,7 +30,7 @@ export const countDownShowTime = () => {
       //Frday between 10 and 5
       nextShowTime = eveningShow();
       duration = moment.duration(eveningShow().diff(estTime)).asMinutes();
-    } else if(estTime.hours() < 10) {
+    } else if (estTime.hours() < 10) {
       // monday to friday before 10 am
       duration = moment.duration(showTime().diff(estTime)).asMinutes();
     }
@@ -41,11 +41,11 @@ export const countDownShowTime = () => {
 
   } else if (estTime.day() === 6) {
     // on Saturday
-      duration = dayAfterTomorrow;
+    duration = dayAfterTomorrow;
   } else {
     // on Sunday
     duration = nextDay;
   }
   remainingTime = moment.duration(duration, "minutes").format("hh:mm:ss");
-  return {remainingTime: remainingTime, nextShowTime: nextShowTime};
+  return { remainingTime: remainingTime, nextShowTime: nextShowTime };
 }
