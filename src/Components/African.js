@@ -92,7 +92,7 @@ class African extends Component {
                 </AppBar>
 
                 {this.state.showRadio === true ?
-                    <RadioWidget play={this.onlineShow} status="Listen live"/> :
+                    <RadioWidget play={this.onlineShow} status="Listen live" /> :
                     <NextShow showCountDown={false} showName="Sauti za Africa" />
                 }
 

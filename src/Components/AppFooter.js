@@ -1,15 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
 import BottomNavigation, { BottomNavigationAction } from 'material-ui/BottomNavigation';
 import Typography from 'material-ui/Typography';
 import {EntypoTwitterWithCircle, EntypoLinkedinWithCircle, EntypoFacebookWithCircle} from 'react-entypo';
-
-const styles = {
-  root: {
-    //width: "100%",
-  },
-};
 
 class AppFooter extends React.Component {
   state = {
@@ -29,7 +22,6 @@ class AppFooter extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
     const { value } = this.state;
 
     return (
@@ -39,7 +31,6 @@ class AppFooter extends React.Component {
           onChange={this.handleChange}
           showLabels
           style={{backgroundColor: 'antiquewhite'}}
-          className={classes.root}
         >
           <BottomNavigationAction id="twitter-icon" label="Twitter" icon={<EntypoTwitterWithCircle />} />
           <BottomNavigationAction id="facebook-icon" label="Facebook" icon={<EntypoFacebookWithCircle />} />
@@ -61,4 +52,4 @@ AppFooter.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(AppFooter);
+export default AppFooter;

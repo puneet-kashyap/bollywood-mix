@@ -39,9 +39,11 @@ class RadioWidget extends Component {
   render() {
     return (
       <div className="container-fluid"
-      style={{ background: "url(" + require('../Images/dark-music.jpg') + ")", backgroundSize: 'cover',
-      backgroundPosition: 'right' }}>
-        <div className="row" style={{ justifyContent: 'center', padding: '50px 0px', height : '50vh' }}>
+        style={{
+          background: "url(" + require('../Images/dark-music.jpg') + ")", backgroundSize: 'cover',
+          backgroundPosition: 'right'
+        }}>
+        <div className="row" style={{ justifyContent: 'center', padding: '50px 0px', height: '50vh' }}>
           <div className="col-md-6">
             <Card style={{
               'textAlign': 'center',
