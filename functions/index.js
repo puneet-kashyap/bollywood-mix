@@ -42,9 +42,9 @@ function sendSongRequestEmail(email, form) {
   });
 }
 
-exports.sendBookingInfo = functions.database.ref('/Request/{name}').onCreate(event => {
+exports.sendBookingInfo = functions.database.ref('/Request/{name}').onCreate((snap, context) => {
   console.log('New Entry added');
-  const original = event.data.val();
+  const original = snap.val();
   console.log('Values', original);
   sendSongRequestEmail(functions.config().email.recipient, original);
 })
