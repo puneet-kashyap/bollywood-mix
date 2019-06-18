@@ -58,18 +58,18 @@ class App extends Component {
 
   contacts = [
     {
-      firstName: 'Yasin',
-      lastName: 'Dewji',
-      src: require('./Images/Yasin_Dewji.jpeg'),
-      phone: '226-666-9558',
-      website: 'bollywoodmix.ca'
-    },
-    {
       firstName: 'Andy',
       lastName: 'Nagpal',
-      src: require('./Images/Andy_profile_pix.png'),
+      src: require('./Images/Andy_mirror_pix.png'),
       phone: '226-666-9558',
       website: 'andynagpal.com'
+    },
+    {
+      firstName: 'Mokshi',
+      lastName: 'Virk',
+      src: require('./Images/Mokshi_Virk.jpg'),
+      phone: '416-804-5005',
+      website: 'mokshivirk.com'
     }
   ]
 
